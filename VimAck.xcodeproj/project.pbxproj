@@ -16,7 +16,10 @@
 		A9106010137D8624005E57AD /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = A910600F137D8624005E57AD /* AppDelegate.rb */; };
 		A91C5D20137D896600512CF1 /* AckWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = A91C5D1F137D896600512CF1 /* AckWindowController.rb */; };
 		A91C5D29137D8B8A00512CF1 /* AckWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91C5D28137D8B8A00512CF1 /* AckWindow.xib */; };
-		A9CADADC1391707B00001AC2 /* ack in Resources */ = {isa = PBXBuildFile; fileRef = A9CADADB1391707B00001AC2 /* ack */; };
+		A9F3BDD2139182A800A4E5C6 /* ack in Resources */ = {isa = PBXBuildFile; fileRef = A9F3BDD1139182A800A4E5C6 /* ack */; };
+		A9F3BDD413918FAA00A4E5C6 /* MatchedLine.rb in Resources */ = {isa = PBXBuildFile; fileRef = A9F3BDD313918FAA00A4E5C6 /* MatchedLine.rb */; };
+		A9F3BDD613918FBA00A4E5C6 /* MatchedFile.rb in Resources */ = {isa = PBXBuildFile; fileRef = A9F3BDD513918FBA00A4E5C6 /* MatchedFile.rb */; };
+		A9F3BDD813918FC700A4E5C6 /* AckTableViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = A9F3BDD713918FC700A4E5C6 /* AckTableViewController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +35,10 @@
 		A910600F137D8624005E57AD /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		A91C5D1F137D896600512CF1 /* AckWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AckWindowController.rb; sourceTree = "<group>"; };
 		A91C5D28137D8B8A00512CF1 /* AckWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AckWindow.xib; sourceTree = "<group>"; };
-		A9CADADB1391707B00001AC2 /* ack */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ack; sourceTree = "<group>"; };
+		A9F3BDD1139182A800A4E5C6 /* ack */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ack; sourceTree = "<group>"; };
+		A9F3BDD313918FAA00A4E5C6 /* MatchedLine.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MatchedLine.rb; sourceTree = "<group>"; };
+		A9F3BDD513918FBA00A4E5C6 /* MatchedFile.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MatchedFile.rb; sourceTree = "<group>"; };
+		A9F3BDD713918FC700A4E5C6 /* AckTableViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AckTableViewController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,15 @@
 		A9105FFF137D8624005E57AD /* VimAck */ = {
 			isa = PBXGroup;
 			children = (
-				A9CADADA1391707B00001AC2 /* bin */,
+				A9F3BDD0139182A800A4E5C6 /* bin */,
 				A910600F137D8624005E57AD /* AppDelegate.rb */,
 				A91C5D1F137D896600512CF1 /* AckWindowController.rb */,
 				A9106008137D8624005E57AD /* Resources */,
 				A910600C137D8624005E57AD /* Other Sources */,
 				A9106000137D8624005E57AD /* Supporting Files */,
+				A9F3BDD313918FAA00A4E5C6 /* MatchedLine.rb */,
+				A9F3BDD513918FBA00A4E5C6 /* MatchedFile.rb */,
+				A9F3BDD713918FC700A4E5C6 /* AckTableViewController.rb */,
 			);
 			path = VimAck;
 			sourceTree = "<group>";
@@ -115,13 +124,12 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		A9CADADA1391707B00001AC2 /* bin */ = {
+		A9F3BDD0139182A800A4E5C6 /* bin */ = {
 			isa = PBXGroup;
 			children = (
-				A9CADADB1391707B00001AC2 /* ack */,
+				A9F3BDD1139182A800A4E5C6 /* ack */,
 			);
-			name = bin;
-			path = ../../../../github/VimAck/VimAck/bin;
+			path = bin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +205,10 @@
 				A9106010137D8624005E57AD /* AppDelegate.rb in Resources */,
 				A91C5D20137D896600512CF1 /* AckWindowController.rb in Resources */,
 				A91C5D29137D8B8A00512CF1 /* AckWindow.xib in Resources */,
-				A9CADADC1391707B00001AC2 /* ack in Resources */,
+				A9F3BDD2139182A800A4E5C6 /* ack in Resources */,
+				A9F3BDD413918FAA00A4E5C6 /* MatchedLine.rb in Resources */,
+				A9F3BDD613918FBA00A4E5C6 /* MatchedFile.rb in Resources */,
+				A9F3BDD813918FC700A4E5C6 /* AckTableViewController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

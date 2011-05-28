@@ -14,10 +14,10 @@ class AppDelegate
     def application(theApplication, openFile:path)
         
         ackWindowController = AckWindowController.alloc.initWithWindowNibName "AckWindow"
-        ackWindowController.setDirectoryPath path
+        ackWindowController.projectRoot = path
         ackWindowController.window.setTitle "Searching in #{path}" 
         ackWindowController.showWindow nil
-        ackWindowController.searchQuery.setStringValue "Object"
+        ackWindowController.searchQuery.setStringValue "SC.Object.create"
         
         return true
     end
