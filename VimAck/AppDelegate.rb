@@ -17,7 +17,7 @@ class AppDelegate
         ackWindowController.setDirectoryPath path
         ackWindowController.window.setTitle "Searching in #{path}" 
         ackWindowController.showWindow nil
-        ackWindowController.searchQuery.setStringValue "mainPage.mainPane"
+        ackWindowController.searchQuery.setStringValue "Object"
         
         return true
     end

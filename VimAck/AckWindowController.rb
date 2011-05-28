@@ -14,10 +14,16 @@ class AckWindowController < NSWindowController
     def runQuery(sender)
         
         # arguments = ["--output=\"\\n$\\`\\n$&\\n$'\"", self.searchQuery.stringValue];
-        arguments = [self.searchQuery.stringValue];
+        arguments = ["-Q", self.searchQuery.stringValue];
+        bundle_path = NSBundle.mainBundle.resourcePath
         
+        cmd = "#{bundle_path}/ack #{arguments.join " "}"
+        
+        puts "------ Dir.chdir: #{@directoryPath}"
         Dir.chdir @directoryPath
-        cmd = "/usr/local/bin/ack -Q #{arguments.join " "} #{Dir.pwd}"
+        
+        puts "------ Running: #{cmd}"
         puts `#{cmd}`
+        puts "== Status: #{$?}"
     end
 end
