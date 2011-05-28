@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'VimAck' target in the 'VimAck' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
