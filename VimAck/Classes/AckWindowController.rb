@@ -6,6 +6,9 @@
 #
 
 # TODO: Review state of memory management in this class
+
+# AckWindowController is responsible for managing the xib of the application
+# as well as startup the ack process and parsing the results
 class AckWindowController < NSWindowController
     
     attr_writer :projectRoot

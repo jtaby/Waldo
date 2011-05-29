@@ -2,8 +2,7 @@
 #  MatchedLine.rb
 #  VimAck
 #
-#  Created by Majd Taby on 5/28/11.
-#  Copyright 2011 University of Michigan - Dearborn. All rights reserved.
+#  Copyright 2011 Majd Taby. All rights reserved.
 #
 
 class MatchedLine
