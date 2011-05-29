@@ -1,11 +1,11 @@
 
 # VimAck
 
+VimAck is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
+
 ![VimAck Screenshot](https://github.com/jtaby/VimAck/raw/master/resources/vimack_shot.png)
 
 ### [Screencast Demo](https://github.com/jtaby/VimAck/raw/master/resources/vimack_demo.mov)
-
-VimAck is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
 ## Usage
 
