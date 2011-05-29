@@ -16,7 +16,7 @@ class AckWindowController < NSWindowController
     
     def runQuery(sender)
         
-        arguments = ["-Q", self.searchQuery.stringValue];
+        arguments = ["--ignore-case", "-Q", self.searchQuery.stringValue];
         bundle_path = NSBundle.mainBundle.resourcePath
         
         ackTask = NSTask.alloc.init
@@ -100,11 +100,11 @@ class AckWindowController < NSWindowController
         matches = []
         
         length = needle.length
-        offset = haystack.index(needle)
+        offset = haystack.downcase.index(needle.downcase)
         
         while offset do            
             matches << offset
-            offset = haystack.index(needle, offset + length)
+            offset = haystack.downcase.index(needle.downcase, offset + length)
         end
                                     
         matches
