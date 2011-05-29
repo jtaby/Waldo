@@ -65,11 +65,11 @@ class AckTableViewController
                                       value: NSColor.grayColor,
                                       range: [0,styledString.length])
             
+            styledString.addAttribute(NSFontAttributeName,
+                                      value: NSFont.systemFontOfSize(11),
+                                      range: [0,styledString.length])
+            
             item.matched_ranges.each do |range|
-                
-                styledString.addAttribute(NSFontAttributeName,
-                                          value: NSFont.systemFontOfSize(11),
-                                          range: [0,styledString.length])
                 
                 styledString.addAttribute(NSFontAttributeName,
                                           value: NSFont.boldSystemFontOfSize(11),
