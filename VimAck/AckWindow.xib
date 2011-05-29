@@ -62,7 +62,7 @@
 						<object class="NSTextField" id="170913265">
 							<reference key="NSNextResponder" ref="104050461"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{20, 228}, {348, 22}}</string>
+							<string key="NSFrame">{{10, 237}, {366, 22}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="381669120"/>
@@ -101,7 +101,7 @@
 						<object class="NSButton" id="381669120">
 							<reference key="NSNextResponder" ref="104050461"/>
 							<int key="NSvFlags">265</int>
-							<string key="NSFrame">{{370, 222}, {96, 32}}</string>
+							<string key="NSFrame">{{378, 231}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="529557997"/>
@@ -109,7 +109,7 @@
 							<object class="NSButtonCell" key="NSCell" id="342730216">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Button</string>
+								<string key="NSContents">Find</string>
 								<reference key="NSSupport" ref="405613198"/>
 								<reference key="NSControlView" ref="381669120"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -133,7 +133,7 @@
 										<object class="NSOutlineView" id="600252859">
 											<reference key="NSNextResponder" ref="195646455"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{480, 209}</string>
+											<string key="NSFrameSize">{480, 227}</string>
 											<reference key="NSSuperview" ref="195646455"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="587539585"/>
@@ -146,7 +146,7 @@
 											<object class="NSMutableArray" key="NSTableColumns">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSTableColumn" id="306932179">
-													<double key="NSWidth">464</double>
+													<double key="NSWidth">477</double>
 													<double key="NSMinWidth">16</double>
 													<double key="NSMaxWidth">1000</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -220,7 +220,7 @@
 											<int key="NSTableViewDraggingDestinationStyle">0</int>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 1}, {480, 209}}</string>
+									<string key="NSFrame">{{1, 1}, {480, 227}}</string>
 									<reference key="NSSuperview" ref="529557997"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="600252859"/>
@@ -252,7 +252,7 @@
 									<double key="NSPercent">0.97363083164300201</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{-1, -1}, {482, 211}}</string>
+							<string key="NSFrame">{{-1, -1}, {482, 229}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="195646455"/>
@@ -392,9 +392,9 @@
 						<reference key="object" ref="104050461"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="529557997"/>
 							<reference ref="170913265"/>
 							<reference ref="381669120"/>
-							<reference ref="529557997"/>
 						</object>
 						<reference key="parent" ref="153832216"/>
 					</object>
@@ -540,11 +540,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>projectRoot</string>
 							<string>records</string>
 							<string>table_view</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -553,11 +555,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>projectRoot</string>
 							<string>records</string>
 							<string>table_view</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">projectRoot</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">records</string>
 								<string key="candidateClassName">id</string>
@@ -591,7 +598,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>directoryPath</string>
+							<string>projectRoot</string>
 							<string>searchButton</string>
 							<string>searchQuery</string>
 							<string>tableView</string>
@@ -610,7 +617,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>directoryPath</string>
+							<string>projectRoot</string>
 							<string>searchButton</string>
 							<string>searchQuery</string>
 							<string>tableView</string>
@@ -619,7 +626,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">directoryPath</string>
+								<string key="name">projectRoot</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
