@@ -8,3 +8,4 @@ build/
 *.pbxuser
 *.perspective
 *.perspectivev3
+DerivedData

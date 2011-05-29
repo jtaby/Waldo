@@ -153,11 +153,12 @@
 /* Begin PBXLegacyTarget section */
 		A9105FFE137D8624005E57AD /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed";
+			buildArgumentsString = "--compile --embed --no-stdlib";
 			buildConfigurationList = A9106016137D8624005E57AD /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Deployment;
