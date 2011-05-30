@@ -9,7 +9,7 @@ require 'FileUtils'
 
 class AppDelegate
     
-    attr_accessor :windowController
+    attr_accessor :windowController, :statusMenu
     
     def initialize
         @windowController = nil
@@ -46,6 +46,8 @@ class AppDelegate
 
             alert.runModal
         end
+
+		showStatusBarMenu
     end
 
     def application(theApplication, openFile:path)
@@ -66,5 +68,15 @@ class AppDelegate
         
         return true
     end
+
+    private
+
+    def showStatusBarMenu
+        statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
+        statusItem.menu = statusMenu
+        statusItem.title = "VimAck"
+        statusItem.highlightMode = true
+    end
+    
 end
 
