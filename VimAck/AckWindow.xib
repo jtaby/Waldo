@@ -63,7 +63,7 @@
 						<object class="NSTextField" id="170913265">
 							<reference key="NSNextResponder" ref="104050461"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{20, 228}, {348, 22}}</string>
+							<string key="NSFrame">{{20, 228}, {332, 22}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="381669120"/>
@@ -102,7 +102,7 @@
 						<object class="NSButton" id="381669120">
 							<reference key="NSNextResponder" ref="104050461"/>
 							<int key="NSvFlags">265</int>
-							<string key="NSFrame">{{370, 222}, {96, 32}}</string>
+							<string key="NSFrame">{{354, 222}, {112, 32}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="768326888"/>
@@ -110,7 +110,7 @@
 							<object class="NSButtonCell" key="NSCell" id="342730216">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Search</string>
+								<string key="NSContents">Find</string>
 								<reference key="NSSupport" ref="405613198"/>
 								<reference key="NSControlView" ref="381669120"/>
 								<int key="NSButtonFlags">-2038284033</int>
