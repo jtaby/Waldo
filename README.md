@@ -20,16 +20,20 @@ VimAck is a port of TextMate's Find-in-Project feature, designed to work with [M
 
 ## Release Notes
 
-The current version (0.1) of VimAck only supports case-insensitive, non-regex searches. It also expects you to launch it with a project directory from the command line.
+The current version (0.2) of VimAck only supports case-insensitive, non-regex searches. It also expects you to launch it with a project directory from the command line.
+
+## Changelog
+
+### Version 0.2
+- Perform ack subprocess on a separate thread
+- Support for Sparkle.framework to ship updates automatically
+- Prevent multiple instances of VimAck to open when you trigger `<leader>f`
 
 ## Roadmap
 
-### Version 0.2
+### Version 0.3
 - Ability to specify project root in VimAck.app
 - Add safe-guards against generic project roots (~, /, etc.)
-- Prevent multiple instances of VimAck to open when you trigger `<leader>f`
-
-### Version 0.3
 - Add support for case-sensitive searches
 - Add support for regex searches
 
