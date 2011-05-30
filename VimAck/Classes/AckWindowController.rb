@@ -26,7 +26,7 @@ class AckWindowController < NSWindowController
     def perform_search()
         
         outData = nil
-        
+
         @queue.sync do
             
             arguments = []
@@ -58,6 +58,7 @@ class AckWindowController < NSWindowController
             
             if status == 0
                 stdOutput = NSString.alloc.initWithData(outData, encoding:NSUTF8StringEncoding)
+                
                 process_output stdOutput
                 
             elsif status == 1
