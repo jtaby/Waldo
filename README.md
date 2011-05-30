@@ -17,9 +17,13 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 	
 *NOTE:* Make sure you `cd` into your project folder. If you don't, then the window won't start-up and you won't get any feedback. I am trying to get that fixed for 0.4
 
+## Known Issues
+- Sometimes on first launch, the app crashes. I can't get this to reproduce reliably and am working towards fixing it. A simple restart of Waldo should fix it. Sorry for any inconvenience. 
+
 ## Changelog
 
 ### Version 0.3
+- Rename project to Waldo (previously known as VimAck)
 - Auto-install vim plugin on first launch (thanks zef)
 - Add support for case-sensitive searches (thanks zef)
 - Add support for regex searches (thanks zef)
