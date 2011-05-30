@@ -9,12 +9,47 @@ require 'FileUtils'
 
 class AppDelegate
     
-    attr_accessor :windowController, :statusMenu
+    attr_accessor :windowController, :statusMenu, :launchedFromFile
     
     def initialize
         @windowController = nil
-        
+        @launchedFromFile = false
         super
+    end
+    
+    def awakeFromNib
+
+        sharedAEManager = NSAppleEventManager.sharedAppleEventManager
+        sharedAEManager.setEventHandler(self, andSelector: :"getURLandStart:withReplyEvent:", forEventClass: KInternetEventClass, andEventID: KAEGetURL)
+    end
+    
+    def getURLandStart(event, withReplyEvent:replyEvent)
+        if event.respond_to?(:paramDescriptorForKeyword)
+            
+            customUrl = NSURL.URLWithString(event.paramDescriptorForKeyword(KeyDirectObject).stringValue)
+            
+            if customUrl.path && (customUrl.path.length == 0)
+                raise "Shouldn't have an empty path"
+            end
+            
+            if customUrl.query
+                # Don't try to gsub unless there is a query to work with.
+                editorName = customUrl.query.gsub('editor=', '')
+                
+                # Save the editor name to a SessionConfig object so we can pluck it out of the air later
+                # (see FuzzyTableViewController.handleRowClick)
+                @sessionConfig.editorName = editorName
+            end
+            
+            application(nil, openFile:customUrl.path)
+        end
+    end
+    
+    def application(application, handleOpenURL:url)
+        return false if not url
+        
+        openWaldoWithProjectRoot url
+        return true
     end
     
     def applicationDidFinishLaunching(a_notification)
@@ -31,24 +66,27 @@ class AppDelegate
 
 		showStatusBarMenu
         
-        # Create the File Open Dialog class.
-        openDialog = NSOpenPanel.openPanel
-                
-        openDialog.setCanChooseFiles false
-        openDialog.setCanChooseDirectories true
-        openDialog.setAllowsMultipleSelection false
-        openDialog.setTitle "Choose a Project Folder to Search in"
-        
-        # Display the dialog.  If the OK button was pressed,
-        # process the files.
-        if openDialog.runModal == NSOKButton
-            file = openDialog.filenames[0]
-            openWaldoWithProjectRoot file
+        if not @launchedFromFile
+            # Create the File Open Dialog class.
+            openDialog = NSOpenPanel.openPanel
+                    
+            openDialog.setCanChooseFiles false
+            openDialog.setCanChooseDirectories true
+            openDialog.setAllowsMultipleSelection false
+            openDialog.setTitle "Choose a Project Folder to Search in"
+            
+            # Display the dialog.  If the OK button was pressed,
+            # process the files.
+            if openDialog.runModal == NSOKButton
+                file = openDialog.filenames[0]
+                openWaldoWithProjectRoot file
+            end
         end
     end
 
     def application(theApplication, openFile:path)
         puts path
+        @launchedFromFile = true
         openWaldoWithProjectRoot path
         return true
     end
