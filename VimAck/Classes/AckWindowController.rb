@@ -17,46 +17,67 @@ class AckWindowController < NSWindowController
     
     def runQuery(sender)
         
+        searchButton.setTitle "Searching..."
+        performSelector :perform_search, withObject:nil, afterDelay:0
+        
+    end
+    
+    def perform_search()
         arguments = []
         arguments << "--ignore-case" if @caseSensitive.state == 0
         arguments << "-Q" if @literalMatch.state == 1
         arguments << self.searchQuery.stringValue
 
         bundle_path = NSBundle.mainBundle.resourcePath
+
+        # Creating a group to synchronize block execution.
+        group = Dispatch::Group.new
         
-        ackTask = NSTask.alloc.init
-        ackTask.setLaunchPath "#{bundle_path}/ack"
-        ackTask.setCurrentDirectoryPath @projectRoot
+        result_queue = Dispatch::Queue.new('access-queue.1')
         
-        ackTask.setArguments arguments
-        
-        outputPipe = NSPipe.alloc.init
-        errorPipe = NSPipe.alloc.init
-        
-        ackTask.setStandardOutput outputPipe
-        ackTask.setStandardError errorPipe
-        
-        #outputPipe.release
-        #errorPipe.release
-        ackTask.launch
-        
-        outData = outputPipe.fileHandleForReading.readDataToEndOfFile
-        errData = errorPipe.fileHandleForReading.readDataToEndOfFile
-        
-        ackTask.waitUntilExit
-        status = ackTask.terminationStatus
-        #ackTask.release
-        
-        if status != 0
-            errOutput = NSString.alloc.initWithData(errData, encoding:NSUTF8StringEncoding)
-            self.statusMessage.setStringValue(NSString.stringWithFormat("Error: %@", status))
-            #errOutput.release
-        else              
-            stdOutput = NSString.alloc.initWithData(outData, encoding:NSUTF8StringEncoding)
+        # Dispatch a task to the default concurrent queue.
+        Dispatch::Queue.concurrent.async(group) do
             
-            process_output stdOutput
-            #stdOutput.release
+            ackTask = NSTask.alloc.init
+            ackTask.setLaunchPath "#{bundle_path}/ack"
+            ackTask.setCurrentDirectoryPath @projectRoot
+            
+            ackTask.setArguments arguments
+            
+            outputPipe = NSPipe.alloc.init
+            errorPipe = NSPipe.alloc.init
+            
+            ackTask.setStandardOutput outputPipe
+            ackTask.setStandardError errorPipe
+            
+            #outputPipe.release
+            #errorPipe.release
+            ackTask.launch
+            
+            outData = outputPipe.fileHandleForReading.readDataToEndOfFile
+            errData = errorPipe.fileHandleForReading.readDataToEndOfFile
+            
+            ackTask.waitUntilExit
+            
+            status = ackTask.terminationStatus
+            #ackTask.release
+            
+            if status != 0
+                errOutput = NSString.alloc.initWithData(errData, encoding:NSUTF8StringEncoding)
+                self.statusMessage.setStringValue(NSString.stringWithFormat("Error: %@", status))
+                #errOutput.release
+                else              
+                stdOutput = NSString.alloc.initWithData(outData, encoding:NSUTF8StringEncoding)
+                
+                process_output stdOutput
+                #stdOutput.release
+            end
         end
+        
+        # Wait for all the blocks to finish.
+        group.wait
+        
+        searchButton.setTitle "Find"
     end
     
     def process_output(output)
