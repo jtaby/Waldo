@@ -1,17 +1,17 @@
 
-# VimAck (Current Version: 0.2)
+# Waldo (Current Version: 0.2)
 
-VimAck is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
+Waldo is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
-![VimAck Screenshot](https://github.com/jtaby/VimAck/raw/master/resources/vimack_shot.png)
+![Waldo Screenshot](https://github.com/jtaby/Waldo/raw/master/resources/vimack_shot.png)
 
-### [Screencast Demo](https://github.com/jtaby/VimAck/raw/master/resources/vimack_demo.mov)
+### [Screencast Demo](https://github.com/jtaby/Waldo/raw/master/resources/vimack_demo.mov)
 
 ## Usage
 
-- Download VimAck.zip and put the .app in your Applications folder
-- Launch VimAck.app to install the Vim plugin
-- Open MacVim.app and trigger VimAck using the `<leader>f` mapping
+- Download Waldo.zip and put the .app in your Applications folder
+- Launch Waldo.app to install the Vim plugin
+- Open MacVim.app and trigger Waldo using the `<leader>f` mapping
 	
 *NOTE:* Make sure you `cd` into your project folder. If you don't, 
 
@@ -20,17 +20,17 @@ VimAck is a port of TextMate's Find-in-Project feature, designed to work with [M
 ### Version 0.2
 - Perform ack subprocess on a separate thread
 - Support for Sparkle.framework to ship updates automatically
-- Prevent multiple instances of VimAck to open when you trigger `<leader>f`
+- Prevent multiple instances of Waldo to open when you trigger `<leader>f`
 
 ## Roadmap
 
 ### Version 0.3
-- Ability to specify project root in VimAck.app
+- Ability to specify project root in Waldo.app
 - Add safe-guards against generic project roots (~, /, etc.)
 - Auto-install vim plugin on first launch (thanks zef)
 - Add support for case-sensitive searches (thanks zef)
 - Add support for regex searches (thanks zef)
-- Launch VimAck as a menu item (thanks ashchan)
+- Launch Waldo as a menu item (thanks ashchan)
 
 ### Version 0.4
 - Keyboard navigation

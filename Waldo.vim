@@ -9,27 +9,27 @@
 " Exit quickly when:
 " - this plugin was already loaded (or disabled)
 " - when 'compatible' is set
-if &cp || exists("g:vimack_loaded") && g:vimack_loaded
+if &cp || exists("g:waldo_loaded") && g:waldo_loaded
   finish
 endif
-let g:vimack_loaded = 1
+let g:waldo_loaded = 1
 
 let s:save_cpo = &cpo
 set cpo&vim
 
 " ============================================================================
-" VimAck support
+" Waldo support
 
-function s:LaunchVimAckViaVim()
+function s:LaunchWaldoViaVim()
   let cwd = getcwd()
-  silent exe  "!open -a VimAck " . shellescape(cwd)
+  silent exe  "!open -a Waldo " . shellescape(cwd)
 endfunction
 
-command! VimAck :call <SID>LaunchVimAckViaVim()
+command! Waldo :call <SID>LaunchWaldoViaVim()
 
-noremap <unique> <script> <Plug>VimAck <SID>Launch
-noremap <SID>Launch :call <SID>LaunchVimAckViaVim()<CR>
+noremap <unique> <script> <Plug>Waldo <SID>Launch
+noremap <SID>Launch :call <SID>LaunchWaldoViaVim()<CR>
 
-if !hasmapto('<Plug>VimAck')
-  map <unique> <silent> <Leader>f <Plug>VimAck
+if !hasmapto('<Plug>Waldo')
+  map <unique> <silent> <Leader>f <Plug>Waldo
 endif

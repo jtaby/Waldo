@@ -1,9 +1,8 @@
 #
 #  rb_main.rb
-#  VimAck
+#  Waldo
 #
-#  Created by Majd Taby on 5/13/11.
-#  Copyright (c) 2011 University of Michigan - Dearborn. All rights reserved.
+#  Copyright (c) 2011 Majd Taby. All rights reserved.
 #
 
 # Loading the Cocoa framework. If you need to load more frameworks, you can

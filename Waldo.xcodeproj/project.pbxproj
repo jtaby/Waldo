@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A906AAC513938F05004AC152 /* Waldo.vim in Resources */ = {isa = PBXBuildFile; fileRef = A906AAC413938F05004AC152 /* Waldo.vim */; };
 		A9079107139323BC00E2993A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9079106139323BC00E2993A /* Sparkle.framework */; };
 		A90791091393242300E2993A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9079106139323BC00E2993A /* Sparkle.framework */; };
 		A907910B1393265F00E2993A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A907910A1393265F00E2993A /* dsa_pub.pem */; };
-		8D3237F213930D8C0063605F /* VimAck.vim in Resources */ = {isa = PBXBuildFile; fileRef = 8D3237F113930D8C0063605F /* VimAck.vim */; };
 		A9105FFB137D8624005E57AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9105FFA137D8624005E57AD /* Cocoa.framework */; };
 		A9105FFD137D8624005E57AD /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9105FFC137D8624005E57AD /* MacRuby.framework */; };
 		A9106004137D8624005E57AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9106002137D8624005E57AD /* InfoPlist.strings */; };
@@ -40,15 +40,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A906AAC413938F05004AC152 /* Waldo.vim */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Waldo.vim; sourceTree = SOURCE_ROOT; };
 		A9079106139323BC00E2993A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A907910A1393265F00E2993A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		8D3237F113930D8C0063605F /* VimAck.vim */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VimAck.vim; sourceTree = SOURCE_ROOT; };
-		A9105FF6137D8624005E57AD /* VimAck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VimAck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9105FF6137D8624005E57AD /* Waldo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waldo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9105FFA137D8624005E57AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A9105FFC137D8624005E57AD /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
-		A9106001137D8624005E57AD /* VimAck-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VimAck-Info.plist"; sourceTree = "<group>"; };
+		A9106001137D8624005E57AD /* Waldo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Waldo-Info.plist"; sourceTree = "<group>"; };
 		A9106003137D8624005E57AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A9106005137D8624005E57AD /* VimAck-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VimAck-Prefix.pch"; sourceTree = "<group>"; };
+		A9106005137D8624005E57AD /* Waldo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Waldo-Prefix.pch"; sourceTree = "<group>"; };
 		A9106006137D8624005E57AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A910600A137D8624005E57AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A910600D137D8624005E57AD /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		A9105FEB137D8624005E57AD = {
 			isa = PBXGroup;
 			children = (
-				A9105FFF137D8624005E57AD /* VimAck */,
+				A9105FFF137D8624005E57AD /* Waldo */,
 				A9105FF9137D8624005E57AD /* Frameworks */,
 				A9105FF7137D8624005E57AD /* Products */,
 			);
@@ -87,7 +87,7 @@
 		A9105FF7137D8624005E57AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9105FF6137D8624005E57AD /* VimAck.app */,
+				A9105FF6137D8624005E57AD /* Waldo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A9105FFF137D8624005E57AD /* VimAck */ = {
+		A9105FFF137D8624005E57AD /* Waldo */ = {
 			isa = PBXGroup;
 			children = (
 				A98DD6731391D4EF00A5785B /* Models */,
@@ -112,15 +112,16 @@
 				A910600C137D8624005E57AD /* Other Sources */,
 				A9106000137D8624005E57AD /* Supporting Files */,
 			);
+			name = Waldo;
 			path = VimAck;
 			sourceTree = "<group>";
 		};
 		A9106000137D8624005E57AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A9106001137D8624005E57AD /* VimAck-Info.plist */,
+				A9106001137D8624005E57AD /* Waldo-Info.plist */,
 				A9106002137D8624005E57AD /* InfoPlist.strings */,
-				A9106005137D8624005E57AD /* VimAck-Prefix.pch */,
+				A9106005137D8624005E57AD /* Waldo-Prefix.pch */,
 				A9106006137D8624005E57AD /* main.m */,
 			);
 			name = "Supporting Files";
@@ -130,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A907910A1393265F00E2993A /* dsa_pub.pem */,
-				8D3237F113930D8C0063605F /* VimAck.vim */,
+				A906AAC413938F05004AC152 /* Waldo.vim */,
 				A9106009137D8624005E57AD /* MainMenu.xib */,
 				A91C5D28137D8B8A00512CF1 /* AckWindow.xib */,
 			);
@@ -192,9 +193,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		A9105FF5137D8624005E57AD /* VimAck */ = {
+		A9105FF5137D8624005E57AD /* Waldo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9106013137D8624005E57AD /* Build configuration list for PBXNativeTarget "VimAck" */;
+			buildConfigurationList = A9106013137D8624005E57AD /* Build configuration list for PBXNativeTarget "Waldo" */;
 			buildPhases = (
 				A9105FF2137D8624005E57AD /* Sources */,
 				A9105FF3137D8624005E57AD /* Frameworks */,
@@ -205,9 +206,9 @@
 			);
 			dependencies = (
 			);
-			name = VimAck;
+			name = Waldo;
 			productName = VimAck;
-			productReference = A9105FF6137D8624005E57AD /* VimAck.app */;
+			productReference = A9105FF6137D8624005E57AD /* Waldo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +219,7 @@
 			attributes = {
 				ORGANIZATIONNAME = "University of Michigan - Dearborn";
 			};
-			buildConfigurationList = A9105FF0137D8624005E57AD /* Build configuration list for PBXProject "VimAck" */;
+			buildConfigurationList = A9105FF0137D8624005E57AD /* Build configuration list for PBXProject "Waldo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9105FF5137D8624005E57AD /* VimAck */,
+				A9105FF5137D8624005E57AD /* Waldo */,
 				A9105FFE137D8624005E57AD /* Deployment */,
 			);
 		};
@@ -252,7 +253,7 @@
 				A98DD67C1391D64400A5785B /* AckWindowController.rb in Resources */,
 				A98DD67D1391D64400A5785B /* AppDelegate.rb in Resources */,
 				A907910B1393265F00E2993A /* dsa_pub.pem in Resources */,
-				8D3237F213930D8C0063605F /* VimAck.vim in Resources */,
+				A906AAC513938F05004AC152 /* Waldo.vim in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +335,9 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VimAck/VimAck-Prefix.pch";
-				INFOPLIST_FILE = "VimAck/VimAck-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "VimAck/Waldo-Prefix.pch";
+				INFOPLIST_FILE = "VimAck/Waldo-Info.plist";
+				PRODUCT_NAME = Waldo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -354,9 +355,9 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VimAck/VimAck-Prefix.pch";
-				INFOPLIST_FILE = "VimAck/VimAck-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "VimAck/Waldo-Prefix.pch";
+				INFOPLIST_FILE = "VimAck/Waldo-Info.plist";
+				PRODUCT_NAME = Waldo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -376,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9105FF0137D8624005E57AD /* Build configuration list for PBXProject "VimAck" */ = {
+		A9105FF0137D8624005E57AD /* Build configuration list for PBXProject "Waldo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9106011137D8624005E57AD /* Debug */,
@@ -385,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9106013137D8624005E57AD /* Build configuration list for PBXNativeTarget "VimAck" */ = {
+		A9106013137D8624005E57AD /* Build configuration list for PBXNativeTarget "Waldo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9106014137D8624005E57AD /* Debug */,

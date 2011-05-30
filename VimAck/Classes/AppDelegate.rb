@@ -1,6 +1,6 @@
 #
 #  AppDelegate.rb
-#  VimAck
+#  Waldo
 #
 #  Copyright 2011 Majd Taby. All rights reserved.
 #
@@ -22,22 +22,22 @@ class AppDelegate
         # Might want to check it for changes so we can update it if needed
         # Something like: FileUtils.compare_file(vim_plugin, plugin_match.first)
         vim_root = '~/.vim/'.stringByExpandingTildeInPath
-        plugin_match = Dir.glob(File.join(vim_root, '**/VimAck.vim'))
+        plugin_match = Dir.glob(File.join(vim_root, '**/Waldo.vim'))
 
         if plugin_match.empty?
 
-            install_path = File.join(vim_root, 'plugin/VimAck.vim')
+            install_path = File.join(vim_root, 'plugin/Waldo.vim')
             if File.exists?(File.join(vim_root, 'bundle')) # see if they use pathogen
-                install_path = install_path.gsub('plugin', 'bundle/VimAck/plugin')
+                install_path = install_path.gsub('plugin', 'bundle/Waldo/plugin')
             end
 
-            vim_plugin = File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'VimAck.vim')
+            vim_plugin = File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'Waldo.vim')
 
-            FileUtils.mkdir_p(install_path.chomp('VimAck.vim'))
+            FileUtils.mkdir_p(install_path.chomp('Waldo.vim'))
             FileUtils.install(vim_plugin, install_path)
 
-            title    = "VimAck.vim is now installed!"
-            message  = "Restart MacVim and use VimAck with <leader>f\n\nView the file at:\n#{install_path}"
+            title    = "Waldo.vim is now installed!"
+            message  = "Restart MacVim and use Waldo with <leader>f\n\nView the file at:\n#{install_path}"
             alert = NSAlert.alertWithMessageText(title,
                                                defaultButton: 'OK',
                                                alternateButton: nil,
@@ -75,7 +75,7 @@ class AppDelegate
     def showStatusBarMenu
         statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
         statusItem.menu = statusMenu
-        statusItem.title = "VimAck"
+        statusItem.title = "Waldo"
         statusItem.highlightMode = true
     end
     

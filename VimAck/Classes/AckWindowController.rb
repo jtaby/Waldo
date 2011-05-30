@@ -1,6 +1,6 @@
 #
 #  AckController.rb
-#  VimAck
+#  Waldo
 #
 #  Copyright 2011 Majd Taby. All rights reserved.
 #
