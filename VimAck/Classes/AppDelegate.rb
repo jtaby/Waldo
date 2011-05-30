@@ -54,12 +54,13 @@ class AppDelegate
         
         if @windowController
             @windowController.projectRoot = path
-            @windowController.window.setTitle "Searching in #{path}" 
+            @windowController.window.setTitle "Searching in #{path}"
             @windowController.searchQuery.setStringValue ""
+            @windowController.window.makeKeyAndOrderFront nil
         else
             ackWindowController = AckWindowController.alloc.initWithWindowNibName "AckWindow"
             ackWindowController.projectRoot = path
-            ackWindowController.window.setTitle "Searching in #{path}" 
+            ackWindowController.window.setTitle "Searching in #{path}"
             ackWindowController.showWindow nil
             ackWindowController.searchQuery.setStringValue "SC.Object.create"
             ackWindowController.window.defaultButtonCell = ackWindowController.searchButton
