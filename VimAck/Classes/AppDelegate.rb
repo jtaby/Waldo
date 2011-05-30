@@ -56,7 +56,7 @@ class AppDelegate
             @windowController.projectRoot = path
             @windowController.window.setTitle "Searching in #{path}"
             @windowController.searchQuery.setStringValue ""
-            @windowController.window.makeKeyAndOrderFront nil
+            @windowController.window.makeKeyAndOrderFront(nil) unless @windowController.window.isVisible
         else
             ackWindowController = AckWindowController.alloc.initWithWindowNibName "AckWindow"
             ackWindowController.projectRoot = path
