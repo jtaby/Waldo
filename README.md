@@ -3,9 +3,9 @@
 
 Waldo is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
-![Waldo Screenshot](https://github.com/jtaby/Waldo/raw/master/resources/vimack_shot.png)
+![Waldo Screenshot](https://github.com/jtaby/Waldo/raw/master/resources/waldo_shot.png)
 
-### [Screencast Demo](https://github.com/jtaby/Waldo/raw/master/resources/vimack_demo.mov)
+### [Screencast Demo](https://github.com/jtaby/Waldo/raw/master/resources/waldo_demo.mov)
 
 ## Usage
 
@@ -36,7 +36,7 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 - Keyboard navigation
 - Launch as menu item (not dock app)
 
-### Version 0.4
+### Version 0.5
 - Add history to search field
 - Add ignore-directories feature
 
@@ -46,7 +46,7 @@ I highly encourage you to fork my project and implement any of the features in t
 
 ### Contributors
 - [Zef Houssney](http://madebykiwi.com)
-- [James Chen](http://blog.ashchan.com)
+- [James Chen](http://ashchan.com)
 
 
 ## License
