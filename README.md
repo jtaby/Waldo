@@ -10,10 +10,7 @@ VimAck is a port of TextMate's Find-in-Project feature, designed to work with [M
 ## Usage
 
 - Download VimAck.zip and put the .app in your Applications folder
-- Put the bundled VimAck.vim plugin in your plugins/ directory for vim
-
-  _If you're using [Janus](https://github.com/carlhuda/janus), put VimAck.vim in ~/.vim/plugins_
-
+- Launch VimAck.app to install the Vim plugin
 - Open MacVim.app and trigger VimAck using the `<leader>f` mapping
 	
 *NOTE:* Make sure you `cd` into your project folder. If you don't, 
