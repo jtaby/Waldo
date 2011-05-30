@@ -7,7 +7,7 @@
 
 class AppDelegate
     
-    attr_accessor :windowController
+    attr_accessor :windowController, :statusMenu
     
     def initialize
         @windowController = nil
@@ -16,25 +16,35 @@ class AppDelegate
     end
     
     def applicationDidFinishLaunching(a_notification)
-        # Fill in
+        showStatusBarMenu
     end
     
     def application(theApplication, openFile:path)
         
         if @windowController
             @windowController.projectRoot = path
-            @windowController.window.setTitle "Searching in #{path}" 
+            @windowController.window.setTitle "Searching in #{path}"
             @windowController.searchQuery.setStringValue ""
+            @windowController.window.makeKeyAndOrderFront(nil) unless @windowController.window.isVisible
         else
             ackWindowController = AckWindowController.alloc.initWithWindowNibName "AckWindow"
             ackWindowController.projectRoot = path
-            ackWindowController.window.setTitle "Searching in #{path}" 
+            ackWindowController.window.setTitle "Searching in #{path}"
             ackWindowController.showWindow nil
             ackWindowController.searchQuery.setStringValue "SC.Object.create"
             @windowController = ackWindowController
         end
         
         return true
+    end
+
+    private
+
+    def showStatusBarMenu
+        statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
+        statusItem.menu = statusMenu
+        statusItem.title = "VimAck"
+        statusItem.highlightMode = true
     end
     
 end
