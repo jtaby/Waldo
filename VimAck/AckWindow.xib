@@ -101,7 +101,7 @@
 						<object class="NSButton" id="381669120">
 							<reference key="NSNextResponder" ref="104050461"/>
 							<int key="NSvFlags">265</int>
-							<string key="NSFrame">{{378, 231}, {96, 32}}</string>
+							<string key="NSFrame">{{378, 231}, {98, 32}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="529557997"/>
@@ -528,7 +528,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">32</int>
+			<int key="maxID">35</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
