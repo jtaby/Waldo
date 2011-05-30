@@ -10,6 +10,7 @@
 		A9079107139323BC00E2993A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9079106139323BC00E2993A /* Sparkle.framework */; };
 		A90791091393242300E2993A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9079106139323BC00E2993A /* Sparkle.framework */; };
 		A907910B1393265F00E2993A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A907910A1393265F00E2993A /* dsa_pub.pem */; };
+		8D3237F213930D8C0063605F /* VimAck.vim in Resources */ = {isa = PBXBuildFile; fileRef = 8D3237F113930D8C0063605F /* VimAck.vim */; };
 		A9105FFB137D8624005E57AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9105FFA137D8624005E57AD /* Cocoa.framework */; };
 		A9105FFD137D8624005E57AD /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9105FFC137D8624005E57AD /* MacRuby.framework */; };
 		A9106004137D8624005E57AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9106002137D8624005E57AD /* InfoPlist.strings */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		A9079106139323BC00E2993A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A907910A1393265F00E2993A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		8D3237F113930D8C0063605F /* VimAck.vim */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VimAck.vim; sourceTree = SOURCE_ROOT; };
 		A9105FF6137D8624005E57AD /* VimAck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VimAck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9105FFA137D8624005E57AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A9105FFC137D8624005E57AD /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A907910A1393265F00E2993A /* dsa_pub.pem */,
+				8D3237F113930D8C0063605F /* VimAck.vim */,
 				A9106009137D8624005E57AD /* MainMenu.xib */,
 				A91C5D28137D8B8A00512CF1 /* AckWindow.xib */,
 			);
@@ -249,6 +252,7 @@
 				A98DD67C1391D64400A5785B /* AckWindowController.rb in Resources */,
 				A98DD67D1391D64400A5785B /* AppDelegate.rb in Resources */,
 				A907910B1393265F00E2993A /* dsa_pub.pem in Resources */,
+				8D3237F213930D8C0063605F /* VimAck.vim in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
