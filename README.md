@@ -1,5 +1,5 @@
 
-# VimAck
+# VimAck (Current Version: 0.2)
 
 VimAck is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
@@ -14,10 +14,6 @@ VimAck is a port of TextMate's Find-in-Project feature, designed to work with [M
 - Open MacVim.app and trigger VimAck using the `<leader>f` mapping
 	
 *NOTE:* Make sure you `cd` into your project folder. If you don't, 
-
-## Release Notes
-
-The current version (0.2) of VimAck only supports case-insensitive, non-regex searches. It also expects you to launch it with a project directory from the command line.
 
 ## Changelog
 
