@@ -1,5 +1,5 @@
 
-# Waldo (Current Version: 0.2)
+# Waldo (Current Version: 0.3)
 
 Waldo is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
@@ -13,9 +13,17 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 - Launch Waldo.app to install the Vim plugin
 - Open MacVim.app and trigger Waldo using the `<leader>f` mapping
 	
-*NOTE:* Make sure you `cd` into your project folder. If you don't, 
+*NOTE:* If you do not have your `.vim/` folder in your home directory, you must manually place Waldo.vim (found inside the .app package) in your `.vim/plugins` directory.
+	
+*NOTE:* Make sure you `cd` into your project folder. If you don't, then the window won't start-up and you won't get any feedback. I am trying to get that fixed for 0.4
 
 ## Changelog
+
+### Version 0.3
+- Auto-install vim plugin on first launch (thanks zef)
+- Add support for case-sensitive searches (thanks zef)
+- Add support for regex searches (thanks zef)
+- Launch Waldo as a menu item (thanks ashchan)
 
 ### Version 0.2
 - Perform ack subprocess on a separate thread
@@ -24,15 +32,9 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 
 ## Roadmap
 
-### Version 0.3
+### Version 0.4
 - Ability to specify project root in Waldo.app
 - Add safe-guards against generic project roots (~, /, etc.)
-- Auto-install vim plugin on first launch (thanks zef)
-- Add support for case-sensitive searches (thanks zef)
-- Add support for regex searches (thanks zef)
-- Launch Waldo as a menu item (thanks ashchan)
-
-### Version 0.4
 - Keyboard navigation
 - Launch as menu item (not dock app)
 
@@ -47,7 +49,6 @@ I highly encourage you to fork my project and implement any of the features in t
 ### Contributors
 - [Zef Houssney](http://madebykiwi.com)
 - [James Chen](http://ashchan.com)
-
 
 ## License
 
