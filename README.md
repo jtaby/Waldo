@@ -49,8 +49,8 @@ The current version (0.2) of VimAck only supports case-insensitive, non-regex se
 I highly encourage you to fork my project and implement any of the features in the Roadmap. Just submit a pull request and be sure to give yourself credit here!
 
 ### Contributors
-[Zef Houssney](http://madebykiwi.com)
-[James Chen](http://blog.ashchan.com)
+- [Zef Houssney](http://madebykiwi.com)
+- [James Chen](http://blog.ashchan.com)
 
 
 ## License
