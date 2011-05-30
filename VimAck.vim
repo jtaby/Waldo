@@ -22,7 +22,7 @@ set cpo&vim
 
 function s:LaunchVimAckViaVim()
   let cwd = getcwd()
-  silent exe "!open -a VimAck " . shellescape(cwd)
+  silent exe  "!open -a VimAck " . shellescape(cwd)
 endfunction
 
 command! VimAck :call <SID>LaunchVimAckViaVim()
