@@ -13,29 +13,27 @@ class AckWindowController < NSWindowController
     
     attr_writer :projectRoot
     attr_accessor :searchQuery, :tableView, :searchButton, :tableViewController, :statsLabel
-    attr_accessor :literalMatch, :caseSensitive
+    attr_accessor :literalMatch, :caseSensitive, :queue
     
     def runQuery(sender)
         
         searchButton.setTitle "Searching..."
+        @queue = Dispatch::Queue.new('org.macruby.synchronizer')
         performSelector :perform_search, withObject:nil, afterDelay:0
         
     end
     
     def perform_search()
         
-        # Creating a group to synchronize block execution.
-        group = Dispatch::Group.new
+        outData = nil
         
-        result_queue = Dispatch::Queue.new('access-queue.1')
-        
-        # Dispatch a task to the default concurrent queue.
-        Dispatch::Queue.concurrent.async(group) do
+        @queue.sync do
             
             arguments = []
             arguments << "--ignore-case" if @caseSensitive.state == 0
             arguments << "-Q" if @literalMatch.state == 1
             arguments << self.searchQuery.stringValue
+            
             bundle_path = NSBundle.mainBundle.resourcePath
             
             ackTask = NSTask.alloc.init
@@ -50,8 +48,6 @@ class AckWindowController < NSWindowController
             ackTask.setStandardOutput outputPipe
             ackTask.setStandardError errorPipe
             
-            #outputPipe.release
-            #errorPipe.release
             ackTask.launch
             
             outData = outputPipe.fileHandleForReading.readDataToEndOfFile
@@ -59,24 +55,31 @@ class AckWindowController < NSWindowController
             
             ackTask.waitUntilExit
             status = ackTask.terminationStatus
-            #ackTask.release
             
-            if status != 0
-                errOutput = NSString.alloc.initWithData(errData, encoding:NSUTF8StringEncoding)
-                self.statusMessage.setStringValue(NSString.stringWithFormat("Error: %@", status))
-                #errOutput.release
-            else              
+            if status == 0
                 stdOutput = NSString.alloc.initWithData(outData, encoding:NSUTF8StringEncoding)
-      
                 process_output stdOutput
-                #stdOutput.release
+                
+            elsif status == 1
+                no_matches
+                
+            else
+                ack_error
             end
         end
         
-        # Wait for all the blocks to finish.
-        group.wait
-        
         searchButton.setTitle "Find" 
+    end
+    
+    def no_matches
+        @statsLabel.setStringValue "No results found"        
+        tableViewController.records = []
+        tableViewController.table_view.reloadData
+    end
+    
+    def ack_error
+        errOutput = NSString.alloc.initWithData(errData, encoding:NSUTF8StringEncoding)
+        @statsLabel.setStringValue(NSString.stringWithFormat("Error: %@", status))           
     end
     
     def process_output(output)
