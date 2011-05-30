@@ -38,13 +38,17 @@ The current version (0.2) of VimAck only supports case-insensitive, non-regex se
 - Keyboard navigation
 - Launch as menu item (not dock app)
 
-### Version 0.5
+### Version 0.4
 - Add history to search field
 - Add ignore-directories feature
 
 ## Contributing
 
-I highly encourage you to fork my project and implement any of the features in the Roadmap. Just submit a pull request and be sure to give yourself credit in the comments of the file!
+I highly encourage you to fork my project and implement any of the features in the Roadmap. Just submit a pull request and be sure to give yourself credit here!
+
+### Contributors
+[Zef Houssney](http://madebykiwi.com)
+
 
 ## License
 
