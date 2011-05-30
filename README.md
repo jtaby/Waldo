@@ -31,8 +31,10 @@ The current version (0.2) of VimAck only supports case-insensitive, non-regex se
 ### Version 0.3
 - Ability to specify project root in VimAck.app
 - Add safe-guards against generic project roots (~, /, etc.)
-- Add support for case-sensitive searches
-- Add support for regex searches
+- Auto-install vim plugin on first launch (thanks zef)
+- Add support for case-sensitive searches (thanks zef)
+- Add support for regex searches (thanks zef)
+- Launch VimAck as a menu item (thanks ashchan)
 
 ### Version 0.4
 - Keyboard navigation
@@ -48,6 +50,7 @@ I highly encourage you to fork my project and implement any of the features in t
 
 ### Contributors
 [Zef Houssney](http://madebykiwi.com)
+[James Chen](http://blog.ashchan.com)
 
 
 ## License
