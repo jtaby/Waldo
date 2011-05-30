@@ -12,17 +12,18 @@
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>NSTextField</string>
+			<string>NSUserDefaultsController</string>
+			<string>NSScroller</string>
+			<string>NSButton</string>
+			<string>NSScrollView</string>
+			<string>NSButtonCell</string>
+			<string>NSTextFieldCell</string>
+			<string>NSOutlineView</string>
+			<string>NSCustomObject</string>
 			<string>NSView</string>
 			<string>NSWindowTemplate</string>
-			<string>NSCustomObject</string>
-			<string>NSScrollView</string>
-			<string>NSOutlineView</string>
-			<string>NSButtonCell</string>
+			<string>NSTextField</string>
 			<string>NSTableColumn</string>
-			<string>NSButton</string>
-			<string>NSScroller</string>
-			<string>NSTextFieldCell</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -104,7 +105,7 @@
 							<string key="NSFrame">{{369, 231}, {107, 32}}</string>
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="529557997"/>
+							<reference key="NSNextKeyView" ref="768326888"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="342730216">
 								<int key="NSCellFlags">67239424</int>
@@ -137,7 +138,11 @@
 										<object class="NSOutlineView" id="600252859">
 											<reference key="NSNextResponder" ref="195646455"/>
 											<int key="NSvFlags">256</int>
+<<<<<<< HEAD
 											<string key="NSFrameSize">{480, 227}</string>
+=======
+											<string key="NSFrameSize">{480, 197}</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 											<reference key="NSSuperview" ref="195646455"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="587539585"/>
@@ -157,7 +162,7 @@
 														<int key="NSCellFlags">75628096</int>
 														<int key="NSCellFlags2">2048</int>
 														<string key="NSContents"/>
-														<object class="NSFont" key="NSSupport">
+														<object class="NSFont" key="NSSupport" id="26">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">11</double>
 															<int key="NSfFlags">3100</int>
@@ -183,12 +188,12 @@
 															<int key="NSColorSpace">6</int>
 															<string key="NSCatalogName">System</string>
 															<string key="NSColorName">controlBackgroundColor</string>
-															<object class="NSColor" key="NSColor">
+															<object class="NSColor" key="NSColor" id="442148486">
 																<int key="NSColorSpace">3</int>
 																<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 															</object>
 														</object>
-														<object class="NSColor" key="NSTextColor">
+														<object class="NSColor" key="NSTextColor" id="819306370">
 															<int key="NSColorSpace">6</int>
 															<string key="NSCatalogName">System</string>
 															<string key="NSColorName">controlTextColor</string>
@@ -224,7 +229,11 @@
 											<int key="NSTableViewDraggingDestinationStyle">0</int>
 										</object>
 									</object>
+<<<<<<< HEAD
 									<string key="NSFrame">{{1, 1}, {480, 227}}</string>
+=======
+									<string key="NSFrame">{{1, 1}, {480, 197}}</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 									<reference key="NSSuperview" ref="529557997"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="600252859"/>
@@ -256,7 +265,11 @@
 									<double key="NSPercent">0.97363083164300201</double>
 								</object>
 							</object>
+<<<<<<< HEAD
 							<string key="NSFrame">{{-1, -1}, {482, 229}}</string>
+=======
+							<string key="NSFrame">{{-1, -1}, {482, 199}}</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 							<reference key="NSSuperview" ref="104050461"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="195646455"/>
@@ -266,17 +279,100 @@
 							<reference key="NSContentView" ref="195646455"/>
 							<bytes key="NSScrollAmts">QSAAAEEgAABBkAAAQZAAAA</bytes>
 						</object>
+						<object class="NSButton" id="308321342">
+							<reference key="NSNextResponder" ref="104050461"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{126, 204}, {98, 18}}</string>
+							<reference key="NSSuperview" ref="104050461"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="161335175"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="63558872">
+								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags2">131072</int>
+								<string key="NSContents">Case Sensitive</string>
+								<reference key="NSSupport" ref="26"/>
+								<reference key="NSControlView" ref="308321342"/>
+								<int key="NSButtonFlags">1211912703</int>
+								<int key="NSButtonFlags2">2</int>
+								<object class="NSCustomResource" key="NSNormalImage" id="721309358">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">NSSwitch</string>
+								</object>
+								<object class="NSButtonImageSource" key="NSAlternateImage" id="303161607">
+									<string key="NSImageName">NSSwitch</string>
+								</object>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
+						<object class="NSButton" id="768326888">
+							<reference key="NSNextResponder" ref="104050461"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{17, 204}, {98, 18}}</string>
+							<reference key="NSSuperview" ref="104050461"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="308321342"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="572837801">
+								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags2">131072</int>
+								<string key="NSContents">Literal Match</string>
+								<reference key="NSSupport" ref="26"/>
+								<reference key="NSControlView" ref="768326888"/>
+								<int key="NSButtonFlags">1211912703</int>
+								<int key="NSButtonFlags2">2</int>
+								<reference key="NSNormalImage" ref="721309358"/>
+								<reference key="NSAlternateImage" ref="303161607"/>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
+						<object class="NSTextField" id="161335175">
+							<reference key="NSNextResponder" ref="104050461"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{277, 206}, {186, 14}}</string>
+							<reference key="NSSuperview" ref="104050461"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="529557997"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="132522387">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">71304192</int>
+								<string key="NSContents"/>
+								<object class="NSFont" key="NSSupport">
+									<string key="NSName">LucidaGrande</string>
+									<double key="NSSize">11</double>
+									<int key="NSfFlags">16</int>
+								</object>
+								<reference key="NSControlView" ref="161335175"/>
+								<object class="NSColor" key="NSBackgroundColor">
+									<int key="NSColorSpace">6</int>
+									<string key="NSCatalogName">System</string>
+									<string key="NSColorName">controlColor</string>
+									<reference key="NSColor" ref="442148486"/>
+								</object>
+								<reference key="NSTextColor" ref="819306370"/>
+							</object>
+						</object>
 					</object>
 					<string key="NSFrame">{{7, 11}, {480, 270}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="170913265"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMaxSize">{1e+13, 1e+13}</string>
 			</object>
 			<object class="NSCustomObject" id="698090841">
 				<string key="NSClassName">AckTableViewController</string>
+			</object>
+			<object class="NSUserDefaultsController" id="167271005">
+				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -354,6 +450,30 @@
 					</object>
 					<int key="connectionID">32</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">caseSensitive</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="308321342"/>
+					</object>
+					<int key="connectionID">38</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">literalMatch</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="768326888"/>
+					</object>
+					<int key="connectionID">41</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">statsLabel</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="161335175"/>
+					</object>
+					<int key="connectionID">57</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -399,6 +519,13 @@
 							<reference ref="529557997"/>
 							<reference ref="170913265"/>
 							<reference ref="381669120"/>
+<<<<<<< HEAD
+=======
+							<reference ref="529557997"/>
+							<reference ref="768326888"/>
+							<reference ref="308321342"/>
+							<reference ref="161335175"/>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 						</object>
 						<reference key="parent" ref="153832216"/>
 					</object>
@@ -479,6 +606,53 @@
 						<reference key="object" ref="698090841"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">33</int>
+						<reference key="object" ref="308321342"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="63558872"/>
+						</object>
+						<reference key="parent" ref="104050461"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">34</int>
+						<reference key="object" ref="63558872"/>
+						<reference key="parent" ref="308321342"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">39</int>
+						<reference key="object" ref="768326888"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="572837801"/>
+						</object>
+						<reference key="parent" ref="104050461"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">40</int>
+						<reference key="object" ref="572837801"/>
+						<reference key="parent" ref="768326888"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">42</int>
+						<reference key="object" ref="161335175"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="132522387"/>
+						</object>
+						<reference key="parent" ref="104050461"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">43</int>
+						<reference key="object" ref="132522387"/>
+						<reference key="parent" ref="161335175"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">45</int>
+						<reference key="object" ref="167271005"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -499,7 +673,13 @@
 					<string>28.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
 					<string>3.NSWindowTemplate.visibleAtLaunch</string>
+					<string>33.IBPluginDependency</string>
+					<string>34.IBPluginDependency</string>
+					<string>39.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
+					<string>40.IBPluginDependency</string>
+					<string>42.IBPluginDependency</string>
+					<string>43.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -518,6 +698,12 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -532,13 +718,19 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
+<<<<<<< HEAD
 			<int key="maxID">35</int>
 		</object>
 <<<<<<< HEAD
+=======
+			<int key="maxID">57</int>
+		</object>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
+<<<<<<< HEAD
 					<string key="className">AckTableViewController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
@@ -586,6 +778,8 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+=======
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 					<string key="className">AckWindowController</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="actions">
@@ -603,6 +797,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+<<<<<<< HEAD
 							<string>projectRoot</string>
 							<string>searchButton</string>
 							<string>searchQuery</string>
@@ -616,21 +811,39 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+=======
+							<string>caseSensitive</string>
+							<string>literalMatch</string>
+							<string>statsLabel</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSButton</string>
+							<string>NSButton</string>
+							<string>NSTextField</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+<<<<<<< HEAD
 							<string>projectRoot</string>
 							<string>searchButton</string>
 							<string>searchQuery</string>
 							<string>tableView</string>
 							<string>tableViewController</string>
+=======
+							<string>caseSensitive</string>
+							<string>literalMatch</string>
+							<string>statsLabel</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
+<<<<<<< HEAD
 								<string key="name">projectRoot</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -649,6 +862,18 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">tableViewController</string>
 								<string key="candidateClassName">id</string>
+=======
+								<string key="name">caseSensitive</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">literalMatch</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">statsLabel</string>
+								<string key="candidateClassName">NSTextField</string>
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 							</object>
 						</object>
 					</object>
@@ -659,9 +884,12 @@
 				</object>
 			</object>
 		</object>
+<<<<<<< HEAD
 =======
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 >>>>>>> b68a942... Make button default so it responds to pressing return, change label to "Search"
+=======
+>>>>>>> 433d418... Create options for Case Sensitive and Literal Match, add stats label.
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
@@ -670,5 +898,9 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">NSSwitch</string>
+			<string key="NS.object.0">{15, 15}</string>
+		</object>
 	</data>
 </archive>
