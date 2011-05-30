@@ -31,6 +31,7 @@ class AppDelegate
             ackWindowController.window.setTitle "Searching in #{path}" 
             ackWindowController.showWindow nil
             ackWindowController.searchQuery.setStringValue "SC.Object.create"
+            ackWindowController.window.defaultButtonCell = ackWindowController.searchButton
             @windowController = ackWindowController
         end
         

@@ -109,7 +109,11 @@
 							<object class="NSButtonCell" key="NSCell" id="342730216">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
+<<<<<<< HEAD
 								<string key="NSContents">Find</string>
+=======
+								<string key="NSContents">Search</string>
+>>>>>>> b68a942... Make button default so it responds to pressing return, change label to "Search"
 								<reference key="NSSupport" ref="405613198"/>
 								<reference key="NSControlView" ref="381669120"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -530,6 +534,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">35</int>
 		</object>
+<<<<<<< HEAD
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
@@ -654,6 +659,9 @@
 				</object>
 			</object>
 		</object>
+=======
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+>>>>>>> b68a942... Make button default so it responds to pressing return, change label to "Search"
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
