@@ -12,11 +12,16 @@
 class AckWindowController < NSWindowController
     
     attr_writer :projectRoot
-    attr_accessor :searchQuery, :tableView, :searchButton, :tableViewController
+    attr_accessor :searchQuery, :tableView, :searchButton, :tableViewController, :statsLabel
+    attr_accessor :literalMatch, :caseSensitive
     
     def runQuery(sender)
         
-        arguments = ["--ignore-case", "-Q", self.searchQuery.stringValue];
+        arguments = []
+        arguments << "--ignore-case" if @caseSensitive.state == 0
+        arguments << "-Q" if @literalMatch.state == 1
+        arguments << self.searchQuery.stringValue
+
         bundle_path = NSBundle.mainBundle.resourcePath
         
         ackTask = NSTask.alloc.init
@@ -56,7 +61,6 @@ class AckWindowController < NSWindowController
     
     def process_output(output)
         lines = output.split "\n"
-        puts "Found #{lines.length} matches" 
         
         tokenizer = Regexp.new(/(.*):(\d+):(.*)/)
         
@@ -90,6 +94,8 @@ class AckWindowController < NSWindowController
             end
         end
         
+        @statsLabel.stringValue = "Found #{lines.length} matches in #{files.size} files."
+
         tableViewController.records = files.values
         tableViewController.projectRoot = @projectRoot
         tableViewController.table_view.reloadData
