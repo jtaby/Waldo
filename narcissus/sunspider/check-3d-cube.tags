@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+CalcCross	check-3d-cube.js	/^function CalcCross(V0, V1) {$/;"	f	lineno:70	type:Array[number] function(Array[number], Array[number])
+CalcNormal	check-3d-cube.js	/^function CalcNormal(V0, V1, V2) {$/;"	f	lineno:78	type:Array[number] function(Array[number], Array[number], Array[number])
+CreateP	check-3d-cube.js	/^function CreateP(X,Y,Z) {$/;"	f	lineno:91	type:<void | CreateP> function(number, number, number)
+DisplArea	check-3d-cube.js	/^var DisplArea = new Object();$/;"	v	lineno:13	type:<null | Object>
+DrawLine	check-3d-cube.js	/^function DrawLine(From, To) {$/;"	f	lineno:17	type:void function(CreateP, CreateP)
+DrawQube	check-3d-cube.js	/^function DrawQube() {$/;"	f	lineno:186	type:void function()
+I	check-3d-cube.js	/^var I = new Array();      \/\/ entity matrix$/;"	v	lineno:8	type:<null | Array[Array[number]] | Array>
+Init	check-3d-cube.js	/^function Init(CubeSize) {$/;"	f	lineno:251	type:void function(number)
+Loop	check-3d-cube.js	/^function Loop() {$/;"	f	lineno:232	type:void function()
+LoopTimer	check-3d-cube.js	/^var LoopTimer;$/;"	v	lineno:11	type:any
+MAdd	check-3d-cube.js	/^function MAdd(M1, M2) {$/;"	f	lineno:123	type:Array[Array] function(any, any)
+MMulti	check-3d-cube.js	/^function MMulti(M1, M2) {$/;"	f	lineno:96	type:Array[Array[number]] function(<Array[Array[number]] | Array>, <Array[Array[number]] | Array>)
+MQube	check-3d-cube.js	/^var MQube = new Array();  \/\/ position information of qube$/;"	v	lineno:7	type:<null | Array[Array[number]] | Array>
+MTrans	check-3d-cube.js	/^var MTrans = new Array();  \/\/ transformation matrix$/;"	v	lineno:6	type:<null | Array[Array[number]] | Array>
+Origin	check-3d-cube.js	/^var Origin = new Object();$/;"	v	lineno:9	type:<null | Object>
+Q	check-3d-cube.js	/^var Q = new Array();$/;"	v	lineno:5	type:<null | Array[CreateP]>
+RotateX	check-3d-cube.js	/^function RotateX(M, Phi) {$/;"	f	lineno:144	type:Array[Array[number]] function(<Array[Array[number]] | Array>, number)
+RotateY	check-3d-cube.js	/^function RotateY(M, Phi) {$/;"	f	lineno:158	type:Array[Array[number]] function(<Array[Array[number]] | Array>, number)
+RotateZ	check-3d-cube.js	/^function RotateZ(M, Phi) {$/;"	f	lineno:172	type:Array[Array[number]] function(<Array[Array[number]] | Array>, number)
+Testing	check-3d-cube.js	/^var Testing = new Object();$/;"	v	lineno:10	type:<null | Object>
+Translate	check-3d-cube.js	/^function Translate(M, Dx, Dy, Dz) {$/;"	f	lineno:134	type:Array[Array[number]] function(<Array[Array[number]] | Array>, number, number, number)
+VMulti	check-3d-cube.js	/^function VMulti(M, V) {$/;"	f	lineno:108	type:Array[number] function(<Array[Array[number]] | Array>, Array[number])
+VMulti2	check-3d-cube.js	/^function VMulti2(M, V) {$/;"	f	lineno:115	type:Array[number] function(<Array[Array[number]] | Array>, Array[number])
+actual	check-3d-cube.js	/^var actual = '';$/;"	v	lineno:330	type:string
+expected	check-3d-cube.js	/^var expected = "-116.618229186398,212.51135212951073,62.5094191967962,1;127.83701023614447,417.11611179082263,90.41153816299942,1;293.9570894432935,196.58093046570656,252.17789153139591,1;49.501850020750915,-8.02382919560505,224.275772565193,1;6.042910556709444,103.41906953429206,-212.1778915313964,1;250.49814997925202,308.02382919560387,-184.27577256519325,1;416.61822918640064,87.48864787048812,-22.509419196796493,1;172.1629897638581,-117.1161117908236,-50.41153816299975,1;150.0000000000007,149.99999999999952,20,1;";$/;"	v	lineno:334	type:string
+i	check-3d-cube.js	/^for ( var i = 20; i <= 160; i *= 2 ) {$/;"	v	lineno:326	type:any
+i	check-3d-cube.js	/^for (var i = 0; i < Q.length; ++i) {$/;"	v	lineno:331	type:number

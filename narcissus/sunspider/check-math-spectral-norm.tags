@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+A	check-math-spectral-norm.js	/^function A(i,j) {$/;"	f	lineno:6	type:number function(number, number)
+AtAu	check-math-spectral-norm.js	/^function AtAu(u,v,w) {$/;"	f	lineno:28	type:void function(Array[number], Array[number], Array[number])
+Atu	check-math-spectral-norm.js	/^function Atu(u,v) {$/;"	f	lineno:19	type:void function(Array[number], Array[number])
+Au	check-math-spectral-norm.js	/^function Au(u,v) {$/;"	f	lineno:10	type:void function(Array[number], Array[number])
+actual	check-math-spectral-norm.js	/^var actual = '';$/;"	v	lineno:49	type:string
+i	check-math-spectral-norm.js	/^for (var i = 6; i <= 48; i *= 2) {$/;"	v	lineno:50	type:number
+spectralnorm	check-math-spectral-norm.js	/^function spectralnorm(n) {$/;"	f	lineno:33	type:number function(number)

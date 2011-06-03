@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+runBlock0	regexp.js	/^  function runBlock0() {$/;"	f	lineno:62	type:void function()
+runBlock1	regexp.js	/^  function runBlock1() {$/;"	f	lineno:148	type:void function()
+runBlock10	regexp.js	/^  function runBlock10() {$/;"	f	lineno:998	type:void function()
+runBlock11	regexp.js	/^  function runBlock11() {$/;"	f	lineno:1179	type:void function()
+runBlock2	regexp.js	/^  function runBlock2() {$/;"	f	lineno:213	type:void function()
+runBlock3	regexp.js	/^  function runBlock3() {$/;"	f	lineno:293	type:void function()
+runBlock4	regexp.js	/^  function runBlock4() {$/;"	f	lineno:417	type:void function()
+runBlock5	regexp.js	/^  function runBlock5() {$/;"	f	lineno:483	type:void function()
+runBlock6	regexp.js	/^  function runBlock6() {$/;"	f	lineno:552	type:void function()
+runBlock7	regexp.js	/^  function runBlock7() {$/;"	f	lineno:643	type:void function()
+runBlock8	regexp.js	/^  function runBlock8() {$/;"	f	lineno:708	type:void function()
+runBlock9	regexp.js	/^  function runBlock9() {$/;"	f	lineno:829	type:void function()
+runRegExpBenchmark	regexp.js	/^function runRegExpBenchmark() {$/;"	f	lineno:42	type:void function()

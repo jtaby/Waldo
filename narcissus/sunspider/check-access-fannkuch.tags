@@ -1,0 +1,9 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+fannkuch	check-access-fannkuch.js	/^function fannkuch(n) {$/;"	f	lineno:5	type:number function(number)
+n	check-access-fannkuch.js	/^var n = 8;$/;"	v	lineno:64	type:number
+ret	check-access-fannkuch.js	/^var ret = fannkuch(n);$/;"	v	lineno:65	type:number

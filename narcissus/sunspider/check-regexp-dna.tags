@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+clen	check-regexp-dna.js	/^GCTGAGGCAGGAGAATCGCTTGAACCCGGGAGGCGGAGGTTGCAGTGAGCCGAGATCGCG\\n\\$/;"	v	lineno:12	type:undefined
+dnaInput	check-regexp-dna.js	/^var dnaInput = ">ONE Homo sapiens alu\\n\\$/;"	v	lineno:8	type:string
+dnaOutputString	check-regexp-dna.js	/^TGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAA\\n\\$/;"	v	lineno:34	type:string
+ilen	check-regexp-dna.js	/^GCTGAGGCAGGAGAATCGCTTGAACCCGGGAGGCGGAGGTTGCAGTGAGCCGAGATCGCG\\n\\$/;"	v	lineno:12	type:undefined
+l	check-regexp-dna.js	/^var l;$/;"	v	lineno:7	type:any
+seqs	check-regexp-dna.js	/^CCACTGCACTCCAGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAAGGCCGGGCGCGGT\\n\\$/;"	v	lineno:13	type:Array[RegExp]
+subs	check-regexp-dna.js	/^AGCGAGACTCCGTCTCAAAAAGGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTT\\n\\$/;"	v	lineno:23	type:Object

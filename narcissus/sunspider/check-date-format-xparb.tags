@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+createNewFormat	check-date-format-xparb.js	/^Date.createNewFormat = function(format) {$/;"	f	lineno:26	type:void function(string)
+createParser	check-date-format-xparb.js	/^Date.createParser = function(format) {$/;"	f	lineno:117	type:void function(any)
+date	check-date-format-xparb.js	/^var date = new Date("1\/1\/2007 1:11:11");$/;"	v	lineno:411	type:Date
+dateFormat	check-date-format-xparb.js	/^Date.prototype.dateFormat = function(format) {$/;"	f	lineno:18	type:any function(string)
+escape	check-date-format-xparb.js	/^String.escape = function(string) {$/;"	f	lineno:347	type:string function(string)
+formatCodeToRegex	check-date-format-xparb.js	/^Date.formatCodeToRegex = function(character, currentGroup) {$/;"	f	lineno:172	type:Object function(string, number)
+getDayOfYear	check-date-format-xparb.js	/^Date.prototype.getDayOfYear = function() {$/;"	f	lineno:291	type:number function()
+getDaysInMonth	check-date-format-xparb.js	/^Date.prototype.getDaysInMonth = function() {$/;"	f	lineno:325	type:any function()
+getFirstDayOfMonth	check-date-format-xparb.js	/^Date.prototype.getFirstDayOfMonth = function() {$/;"	f	lineno:315	type:number function()
+getFormatCode	check-date-format-xparb.js	/^Date.getFormatCode = function(character) {$/;"	f	lineno:48	type:string function(string)
+getGMTOffset	check-date-format-xparb.js	/^Date.prototype.getGMTOffset = function() {$/;"	f	lineno:285	type:<number | string> function()
+getLastDayOfMonth	check-date-format-xparb.js	/^Date.prototype.getLastDayOfMonth = function() {$/;"	f	lineno:320	type:number function()
+getSuffix	check-date-format-xparb.js	/^Date.prototype.getSuffix = function() {$/;"	f	lineno:330	type:string function()
+getTimezone	check-date-format-xparb.js	/^Date.prototype.getTimezone = function() {$/;"	f	lineno:279	type:any function()
+getWeekOfYear	check-date-format-xparb.js	/^Date.prototype.getWeekOfYear = function() {$/;"	f	lineno:300	type:<number | string | String> function()
+isLeapYear	check-date-format-xparb.js	/^Date.prototype.isLeapYear = function() {$/;"	f	lineno:310	type:<number | boolean> function()
+leftPad	check-date-format-xparb.js	/^String.leftPad = function (val, size, ch) {$/;"	f	lineno:351	type:<number | string | String> function(number, number, string)
+longFormat	check-date-format-xparb.js	/^    var longFormat = date.dateFormat("l, F d, Y g:i:s A");$/;"	v	lineno:416	type:any
+parseDate	check-date-format-xparb.js	/^Date.parseDate = function(input, format) {$/;"	f	lineno:109	type:any function(any, any)
+ret	check-date-format-xparb.js	/^var ret;$/;"	v	lineno:413	type:any
+shortFormat	check-date-format-xparb.js	/^    var shortFormat = date.dateFormat("Y-m-d");$/;"	v	lineno:415	type:any

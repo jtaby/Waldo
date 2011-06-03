@@ -1,0 +1,10 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+nsieve	check-access-nsieve.js	/^function nsieve(m, isPrime){$/;"	f	lineno:15	type:number function(number, Array[boolean])
+pad	check-access-nsieve.js	/^function pad(number,width){$/;"	f	lineno:6	type:string function(any, any)
+ret	check-access-nsieve.js	/^var ret = 0;$/;"	v	lineno:30	type:number
+sieve	check-access-nsieve.js	/^function sieve() {$/;"	f	lineno:31	type:void function()

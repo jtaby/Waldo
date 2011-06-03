@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+%anonymous_function	raytrace.js	/^    return function() {$/;"	f	lineno:35	type:undefined function()
+Class	raytrace.js	/^var Class = {$/;"	v	lineno:33	type:Object
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:192	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:219	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:283	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:301	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:324	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:358	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:383	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:419	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:444	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:494	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:548	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:571	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:615	type:any
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:630	type:Object
+Flog	raytrace.js	/^if(typeof(Flog) == 'undefined') var Flog = {};$/;"	v	lineno:74	type:any
+add	raytrace.js	/^    add : function(c1, c2){$/;"	f	lineno:94	type:Object function(Object, Object)
+add	raytrace.js	/^    add : function(v, w) {$/;"	f	lineno:261	type:Object function(Object, Object)
+addScalar	raytrace.js	/^    addScalar: function(c1, s){$/;"	f	lineno:104	type:Object function(Object, number)
+blend	raytrace.js	/^    blend: function(c1, c2, w){$/;"	f	lineno:167	type:Object function(Object, Object, any)
+brightness	raytrace.js	/^    brightness : function() {$/;"	f	lineno:176	type:number function()
+checkNumber	raytrace.js	/^var checkNumber;$/;"	v	lineno:18	type:number
+copy	raytrace.js	/^    copy: function(vector){$/;"	f	lineno:235	type:void function(any)
+create	raytrace.js	/^  create: function() {$/;"	f	lineno:34	type:undefined function() function()
+cross	raytrace.js	/^    cross : function(w) {$/;"	f	lineno:250	type:Object function(any)
+distance	raytrace.js	/^    distance : function(color) {$/;"	f	lineno:162	type:number function(any)
+divideFactor	raytrace.js	/^    divideFactor : function(c1, f) {$/;"	f	lineno:146	type:Object function(any, any)
+dot	raytrace.js	/^    dot : function(w) {$/;"	f	lineno:257	type:number function(<undefined | null | Object>)
+extend	raytrace.js	/^Object.extend = function(destination, source) {$/;"	f	lineno:42	type:Object function(Object, Object)
+getColor	raytrace.js	/^        getColor: function(u, v){$/;"	f	lineno:373	type:any function(any, any)
+getColor	raytrace.js	/^        getColor: function(u, v){$/;"	f	lineno:404	type:any function(any, any)
+getColor	raytrace.js	/^    getColor: function(u, v){$/;"	f	lineno:342	type:void function(any, any)
+getIntensity	raytrace.js	/^    getIntensity: function(distance){$/;"	f	lineno:208	type:number function(any)
+getPixelColor	raytrace.js	/^    getPixelColor: function(ray, scene){$/;"	f	lineno:702	type:Object function(Object, Object)
+getRay	raytrace.js	/^    getRay: function(vx, vy){$/;"	f	lineno:591	type:Object function(number, number)
+getReflectionRay	raytrace.js	/^    getReflectionRay: function(P,N,V){$/;"	f	lineno:731	type:Object function(Object, <undefined | null | Object>, any)
+initialize	raytrace.js	/^        initialize : function(color, reflection, refraction, transparency, gloss) {$/;"	f	lineno:365	type:void function(any, any, any, any, any)
+initialize	raytrace.js	/^        initialize : function(colorEven, colorOdd, reflection, transparency, gloss, density) {$/;"	f	lineno:394	type:void function(any, any, any, any, any, any)
+initialize	raytrace.js	/^    initialize : function() {$/;"	f	lineno:312	type:void function()
+initialize	raytrace.js	/^    initialize : function() {$/;"	f	lineno:338	type:void function()
+initialize	raytrace.js	/^    initialize : function() {$/;"	f	lineno:429	type:void function()
+initialize	raytrace.js	/^    initialize : function() {$/;"	f	lineno:562	type:void function()
+initialize	raytrace.js	/^    initialize : function(color, ambience) {$/;"	f	lineno:624	type:void function(any, any)
+initialize	raytrace.js	/^    initialize : function(pos, color, intensity) {$/;"	f	lineno:202	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize : function(pos, d, material) {$/;"	f	lineno:503	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize : function(pos, dir) {$/;"	f	lineno:291	type:void function(any, any)
+initialize	raytrace.js	/^    initialize : function(pos, lookAt, up) {$/;"	f	lineno:583	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize : function(pos, radius, material) {$/;"	f	lineno:451	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize : function(r, g, b) {$/;"	f	lineno:84	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize : function(x, y, z) {$/;"	f	lineno:229	type:void function(any, any, any)
+initialize	raytrace.js	/^    initialize: function(options){$/;"	f	lineno:638	type:void function(any)
+intersect	raytrace.js	/^    intersect: function(ray){$/;"	f	lineno:457	type:Object function(Object)
+intersect	raytrace.js	/^    intersect: function(ray){$/;"	f	lineno:509	type:Object function(Object)
+limit	raytrace.js	/^    limit: function(){$/;"	f	lineno:156	type:void function()
+magnitude	raytrace.js	/^    magnitude : function() {$/;"	f	lineno:246	type:number function()
+multiply	raytrace.js	/^    multiply : function(c1, c2) {$/;"	f	lineno:126	type:Object function(Object, Object)
+multiplyScalar	raytrace.js	/^    multiplyScalar : function(c1, f) {$/;"	f	lineno:136	type:Object function(<undefined | null | Object>, number)
+multiplyScalar	raytrace.js	/^    multiplyScalar : function(v, w) {$/;"	f	lineno:274	type:Object function(<undefined | null | Object>, number)
+multiplyVector	raytrace.js	/^    multiplyVector : function(v, w) {$/;"	f	lineno:270	type:Object function(any, any)
+normalize	raytrace.js	/^    normalize : function() {$/;"	f	lineno:241	type:Object function()
+rayTrace	raytrace.js	/^    rayTrace: function(info, ray, scene, depth){$/;"	f	lineno:740	type:Object function(Object, Object, Object, number)
+renderScene	raytrace.js	/^    renderScene: function(scene, canvas){$/;"	f	lineno:673	type:void function(Object, null)
+renderScene	raytrace.js	/^function renderScene(){$/;"	f	lineno:842	type:void function()
+setPixel	raytrace.js	/^    setPixel: function(x, y, color){$/;"	f	lineno:657	type:void function(number, number, Object)
+subtract	raytrace.js	/^    subtract : function(v, w) {$/;"	f	lineno:265	type:Object function(Object, Object)
+subtract	raytrace.js	/^    subtract: function(c1, c2){$/;"	f	lineno:116	type:Object function(Object, Object)
+testIntersection	raytrace.js	/^    testIntersection: function(ray, scene, exclude){$/;"	f	lineno:711	type:Object function(Object, Object, <undefined | null | Object>)
+toString	raytrace.js	/^        toString : function () {$/;"	f	lineno:377	type:string function()
+toString	raytrace.js	/^        toString : function () {$/;"	f	lineno:413	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:183	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:214	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:278	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:296	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:353	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:439	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:489	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:543	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:566	type:string function()
+toString	raytrace.js	/^    toString : function () {$/;"	f	lineno:610	type:string function()
+wrapUp	raytrace.js	/^    wrapUp: function(t){$/;"	f	lineno:346	type:number function(any)

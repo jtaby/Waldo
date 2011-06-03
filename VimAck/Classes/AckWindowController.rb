@@ -5,15 +5,13 @@
 #  Copyright 2011 Majd Taby. All rights reserved.
 #
 
-# TODO: Review state of memory management in this class
-
 # AckWindowController is responsible for managing the xib of the application
 # as well as startup the ack process and parsing the results
 class AckWindowController < NSWindowController
     
-    attr_writer :projectRoot
     attr_accessor :searchQuery, :tableView, :searchButton, :tableViewController, :statsLabel
-    attr_accessor :literalMatch, :caseSensitive, :queue
+    attr_accessor :literalMatch, :caseSensitive, :queue, :cached_symbols
+    attr_reader :projectRoot
     
     def runQuery(sender)
         
@@ -23,21 +21,29 @@ class AckWindowController < NSWindowController
         
     end
     
+    def reset
+        @cached_symbols = nil
+    end
+    
+    def projectRoot= (val)
+        reset
+        @projectRoot = val
+    end
+    
     def perform_search()
         
         outData = nil
 
         @queue.sync do
-            
-            arguments = []
-            arguments << "--ignore-case" if @caseSensitive.state == 0
-            arguments << "-Q" if @literalMatch.state == 1
-            arguments << self.searchQuery.stringValue
-            
             bundle_path = NSBundle.mainBundle.resourcePath
+
+            temp_file = "#{bundle_path}/tags"
+            
+            arguments = %W(#{bundle_path}/jsctags -o #{temp_file})
+            arguments.concat Dir["#{@projectRoot}/**/*.js"]
             
             ackTask = NSTask.alloc.init
-            ackTask.setLaunchPath "#{bundle_path}/ack"
+            ackTask.setLaunchPath "#{bundle_path}/node-64"
             ackTask.setCurrentDirectoryPath @projectRoot
             
             ackTask.setArguments arguments
@@ -58,14 +64,10 @@ class AckWindowController < NSWindowController
             
             if status == 0
                 stdOutput = NSString.alloc.initWithData(outData, encoding:NSUTF8StringEncoding)
-                
                 process_output stdOutput
                 
-            elsif status == 1
-                no_matches
-                
             else
-                ack_error
+                ack_error errData, status
             end
         end
         
@@ -78,65 +80,66 @@ class AckWindowController < NSWindowController
         tableViewController.table_view.reloadData
     end
     
-    def ack_error
+    def ack_error(errData, status)
         errOutput = NSString.alloc.initWithData(errData, encoding:NSUTF8StringEncoding)
-        @statsLabel.setStringValue(NSString.stringWithFormat("Error: %@", status))           
+        @statsLabel.setStringValue(NSString.stringWithFormat("Error: %@", errOutput))           
     end
     
     def process_output(output)
-        lines = output.split "\n"
+
+        records = @cached_symbols || parse_tags()
+        search_results = []
         
-        tokenizer = Regexp.new(/(.*):(\d+):(.*)/)
-        
-        files = {}
-        
-        lines.each do |line|
-            if line.match tokenizer
-                
-                filename = $1
-                
-                if not files[filename]
-                    file_record = MatchedFile.new
-                    file_record.filename = filename
-                    file_record.records = []
-                    
-                    files[filename] = file_record
-                else
-                    file_record = files[filename]
-                end
-                
-                line_record = MatchedLine.new
-                line_record.filename = filename
-                line_record.line_number = $2
-                line_record.matched_line = $3
-                line_record.query = self.searchQuery.stringValue
-                line_record.matched_ranges = find_matches(line_record.matched_line, line_record.query)
-                
-                file_record.records << line_record
-            else
-                throw "Could not parse output from ack: #{line}"
+        matches = records.each do |matched_file|        
+            matches = matched_file.records.select do |matched_line|
+                puts "comparing #{matched_line.query} to #{@searchQuery.stringValue}"
+                matched_line.query.include? @searchQuery.stringValue
             end
+            
+            if matches.length > 0
+                cloned_file_obj = matched_file.dup
+                cloned_file_obj.records = matches
+                
+                search_results << cloned_file_obj
+            end
+            
         end
         
-        @statsLabel.stringValue = "Found #{lines.length} matches in #{files.size} files."
-
-        tableViewController.records = files.values
+        tableViewController.records = search_results
         tableViewController.projectRoot = @projectRoot
         tableViewController.table_view.reloadData
         tableView.expandItem(nil, expandChildren:true)
     end
     
-    def find_matches(haystack, needle)
-        matches = []
-        
-        length = needle.length
-        offset = haystack.downcase.index(needle.downcase)
-        
-        while offset do            
-            matches << offset
-            offset = haystack.downcase.index(needle.downcase, offset + length)
+    def parse_tags
+    
+        files = Hash.new {|h,k| h[k] = MatchedFile.new(k, []) }
+
+        bundle_path = NSBundle.mainBundle.resourcePath
+        temp_file = "#{bundle_path}/tags"
+
+        File.open temp_file, "r" do |file|
+            file.readlines.each do |line|
+                next if line =~ /^[!%]/
+
+                line =~ %r{([^\t]*)\t+([^\t]*)\t+/\^(.*)\$/;.*lineno:(\d+)}
+                #"
+                
+                symbol_name = $1
+                file = $2
+                matched_line = $3
+                line_number = $4
+                
+                puts symbol_name
+#                next if not @searchQuery.stringValue =~ symbol_name
+                
+                files[file].records << MatchedLine.new(file, line_number, matched_line, nil, symbol_name)
+            end
         end
-                                    
-        matches
+        
+        File.delete temp_file
+        @cached_symbols = files.values if not @cached_symbols
+
+        files.values
     end
 end

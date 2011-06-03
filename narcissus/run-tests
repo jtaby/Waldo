@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm tests/test*~ 2>/dev/null
+if test "$1"
+then
+  node run-tests.js some `ls tests/test* | wc -l` "$1"
+else
+  node run-tests.js all `ls tests/test* | wc -l`
+fi

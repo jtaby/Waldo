@@ -85,7 +85,6 @@ class AppDelegate
     end
 
     def application(theApplication, openFile:path)
-        puts path
         @launchedFromFile = true
         openWaldoWithProjectRoot path
         return true

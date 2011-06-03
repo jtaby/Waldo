@@ -39,13 +39,12 @@ class AckTableViewController
             ret = item.records[index]
             ret
         end
-    end 
+    end   
     
     def outlineView(outlineView, objectValueForTableColumn:tableColumn, byItem:item)
         
         # For MatchedFile items, separate the path from the filename
         if item.instance_of? MatchedFile
-            
             path = File.path item.filename
             separater = " - "
             base = File.basename item.filename
@@ -55,34 +54,30 @@ class AckTableViewController
             styledString.addAttribute(NSFontAttributeName,
                                       value: NSFont.systemFontOfSize(11),
                                       range: [0,styledString.length])
-            
         # For MatchedLine items, display the match in black, bold, rest in gray
         else
-            styledString = NSMutableAttributedString.alloc.initWithString item.matched_line
+            base = item.query
+            separater = " - "
+            path = item.matched_line
+            styledString = NSMutableAttributedString.alloc.initWithString "#{base}#{separater}#{path}"
             
             
             styledString.addAttribute(NSForegroundColorAttributeName,
                                       value: NSColor.grayColor,
-                                      range: [0,styledString.length])
+                                      range: [0, styledString.length])
             
             styledString.addAttribute(NSFontAttributeName,
                                       value: NSFont.systemFontOfSize(11),
-                                      range: [0,styledString.length])
+                                      range: [0,styledString.length])     
+                                      
+            styledString.addAttribute(NSFontAttributeName,
+                                      value: NSFont.boldSystemFontOfSize(11),
+                                      range:[0,base.length])
             
-            item.matched_ranges.each do |range|
-                
-                styledString.addAttribute(NSFontAttributeName,
-                                          value: NSFont.boldSystemFontOfSize(11),
-                                          range:[range,item.query.length])
-                
-                styledString.addAttribute(NSForegroundColorAttributeName,
-                                          value: NSColor.blackColor,
-                                          range:[range,item.query.length])
-            end
-            
+            styledString.addAttribute(NSForegroundColorAttributeName,
+                                      value: NSColor.blackColor,
+                                      range:[0,base.length])
         end
-        
-        styledString
     end
     
     def outlineView(outlineView, willDisplayCell:cell, forTableColumn:tableColumn, item:item)

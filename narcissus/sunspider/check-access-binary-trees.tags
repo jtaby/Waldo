@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Patrick Walton	/pwalton@mozilla.com/
+!_TAG_PROGRAM_NAME	jsctags	//
+!_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.1	//
+TreeNode	check-access-binary-trees.js	/^function TreeNode(left,right,item){$/;"	f	lineno:5	type:TreeNode function(<null | TreeNode>, <null | TreeNode>, number)
+bottomUpTree	check-access-binary-trees.js	/^function bottomUpTree(item,depth){$/;"	f	lineno:16	type:TreeNode function(number, number)
+check	check-access-binary-trees.js	/^    var check = bottomUpTree(0,stretchDepth).itemCheck();$/;"	v	lineno:36	type:number
+depth	check-access-binary-trees.js	/^    for (var depth=minDepth; depth<=maxDepth; depth+=2){$/;"	v	lineno:39	type:number
+i	check-access-binary-trees.js	/^        for (var i=1; i<=iterations; i++){$/;"	v	lineno:43	type:number
+itemCheck	check-access-binary-trees.js	/^TreeNode.prototype.itemCheck = function(){$/;"	f	lineno:11	type:number function()
+iterations	check-access-binary-trees.js	/^        var iterations = 1 << (maxDepth - depth + minDepth);$/;"	v	lineno:40	type:number
+longLivedTree	check-access-binary-trees.js	/^    var longLivedTree = bottomUpTree(0,maxDepth);$/;"	v	lineno:38	type:TreeNode
+maxDepth	check-access-binary-trees.js	/^    var maxDepth = Math.max(minDepth + 2, n);$/;"	v	lineno:33	type:number
+minDepth	check-access-binary-trees.js	/^    var minDepth = 4;$/;"	v	lineno:32	type:number
+n	check-access-binary-trees.js	/^for ( var n = 4; n <= 7; n += 1 ) {$/;"	v	lineno:31	type:number
+ret	check-access-binary-trees.js	/^var ret;$/;"	v	lineno:29	type:number
+stretchDepth	check-access-binary-trees.js	/^    var stretchDepth = maxDepth + 1;$/;"	v	lineno:34	type:number

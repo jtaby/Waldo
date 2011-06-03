@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Type Inference</title>
+    <script type="text/javascript" src="narcissus/jsdefs.js"></script>
+    <script type="text/javascript" src="narcissus/jslex.js"></script>
+    <script type="text/javascript" src="narcissus/jsparse.js"></script>
+    <script type="text/javascript" src="narcissus/jscfa.js"></script>
+    <script type="text/javascript" src="jstypes.js"></script>
+    <style type="text/css">
+      td {
+      padding: 0px 14px 0px 0px;
+      font: normal medium sans-serif;
+      }
+      #body {
+      position: absolute;
+      top: 2%;
+      left: 2%
+      }
+      #col1 {
+      position: absolute;
+      width: 160px;
+      top: 120px;
+      font-family: sans-serif;
+      }
+      #col2 {
+      position: absolute;
+      left: 200px;
+      width: 613px;
+      }
+      #title {
+      font: normal xx-large sans-serif;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      }
+      #description {
+      font: small sans-serif;
+      position: relative;
+      text-align: left;
+      }
+      #js {
+      position: relative;
+      width: 613px;
+      }
+      #button {
+      position: relative;
+      text-align:center;
+      }
+      #types {
+      position: relative;
+      width: 1045px;
+      }
+      #colnames {
+      visibility: hidden;
+      }
+    </style>
+  </head>
+  <body id=body>
+
+    <div id=col1>
+      Examples:
+      <p/>
+      <div onclick="fill('examples/polymorphism.js');">polymorphism</div>
+      <div onclick="fill('examples/baseToObject.js');">convert to object</div>
+      <div onclick="fill('examples/constructor.js');">new vs no new</div>
+      <div onclick="fill('examples/inheritance.js');">inheritance</div>
+      <div onclick="fill('examples/recursion.js');">recursion</div>
+      <div onclick="fill('examples/higher-order.js');">first-class functions</div>
+      <div onclick="fill('examples/exceptions.js');">exceptions</div>
+      <div onclick="fill('examples/check-crypto-aes.js');">check-crypto-aes</div>
+    </div>
+
+    <div id=col2>
+
+      <div id=title> 
+        JavaScript type inference
+      </div>
+      <p/>
+      <div id=description>
+        The type inference algorithm is based on the CFA2 control-flow 
+        analysis.
+        Currently, it handles core JavaScript only (DOM support will be added 
+        soon). For comments and suggestions, email:
+        <i id=email> dvardoulakis at mozilla dot com. </i>
+      </div>
+      <p/>
+      <div>
+        <textarea id=js rows=25 spellcheck="false"></textarea>
+      </div>
+      <p/>
+      <div id=button>
+        <button onclick="gettypes();">
+          Type some JavaScript and click to see the types.
+        </button>
+      </div>
+      <p/>
+      <table id="types"> 
+        <tr id="colnames">
+          <td> Line </td> <td> Name </td> <td> Type </td>
+        </tr>
+      </table>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in `ls *js`
+do
+  /home/dimvar/moz/jsctags-wcopy/bin/jsctags.js "$file"
+  mv tags `basename "$file" .js`.tags
+done
+
