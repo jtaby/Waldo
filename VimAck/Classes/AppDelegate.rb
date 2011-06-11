@@ -18,9 +18,10 @@ class AppDelegate
     end
     
     def awakeFromNib
-
-        sharedAEManager = NSAppleEventManager.sharedAppleEventManager
-        sharedAEManager.setEventHandler(self, andSelector: :"getURLandStart:withReplyEvent:", forEventClass: KInternetEventClass, andEventID: KAEGetURL)
+        eventManager = NSAppleEventManager.sharedAppleEventManager
+        eventManager.setEventHandler(self, andSelector: :"getURLandStart:withReplyEvent:", 
+                                         forEventClass: KInternetEventClass, 
+                                            andEventID: KAEGetURL)
     end
     
     def getURLandStart(event, withReplyEvent:replyEvent)
@@ -29,16 +30,7 @@ class AppDelegate
             customUrl = NSURL.URLWithString(event.paramDescriptorForKeyword(KeyDirectObject).stringValue)
             
             if customUrl.path && (customUrl.path.length == 0)
-                raise "Shouldn't have an empty path"
-            end
-            
-            if customUrl.query
-                # Don't try to gsub unless there is a query to work with.
-                editorName = customUrl.query.gsub('editor=', '')
-                
-                # Save the editor name to a SessionConfig object so we can pluck it out of the air later
-                # (see FuzzyTableViewController.handleRowClick)
-                @sessionConfig.editorName = editorName
+                raise "Path is required"
             end
             
             application(nil, openFile:customUrl.path)
@@ -53,7 +45,8 @@ class AppDelegate
     end
     
     def applicationDidFinishLaunching(a_notification)
-        
+        showStatusBarMenu
+
         # Install the Vim plugin if it's not installed already
         # Might want to check it for changes so we can update it if needed
         # Something like: FileUtils.compare_file(vim_plugin, plugin_match.first)
@@ -63,29 +56,13 @@ class AppDelegate
         if plugin_match.empty?
             installVimPlugin vim_root
         end
-
-		showStatusBarMenu
         
         if not @launchedFromFile
-            # Create the File Open Dialog class.
-            openDialog = NSOpenPanel.openPanel
-                    
-            openDialog.setCanChooseFiles false
-            openDialog.setCanChooseDirectories true
-            openDialog.setAllowsMultipleSelection false
-            openDialog.setTitle "Choose a Project Folder to Search in"
-            
-            # Display the dialog.  If the OK button was pressed,
-            # process the files.
-            if openDialog.runModal == NSOKButton
-                file = openDialog.filenames[0]
-                openWaldoWithProjectRoot file
-            end
+          showOpenDialog
         end
     end
 
     def application(theApplication, openFile:path)
-        puts path
         @launchedFromFile = true
         openWaldoWithProjectRoot path
         return true
@@ -93,10 +70,27 @@ class AppDelegate
 
 private
 
+    def showOpenDialog
+        # Create the File Open Dialog class.
+        openDialog = NSOpenPanel.openPanel
+                
+        openDialog.setCanChooseFiles false
+        openDialog.setCanChooseDirectories true
+        openDialog.setAllowsMultipleSelection false
+        openDialog.setTitle "Choose a Project Folder to Search in"
+        
+        # Display the dialog.  If the OK button was pressed,
+        # process the files.
+        if openDialog.runModal == NSOKButton
+            file = openDialog.filenames[0]
+            openWaldoWithProjectRoot file
+        end
+    end
+
     def showStatusBarMenu
         statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
         statusItem.menu = statusMenu
-        statusItem.title = "Waldo"
+        statusItem.title = "Waldo3"
         statusItem.highlightMode = true
     end
     
@@ -128,13 +122,17 @@ private
             @windowController.projectRoot = path
             @windowController.window.setTitle "Searching in #{path}"
             @windowController.searchQuery.setStringValue ""
-            @windowController.window.makeKeyAndOrderFront(nil) unless @windowController.window.isVisible
+            @windowController.window.makeKeyAndOrderFront(self) unless @windowController.window.isVisible
+            @windowController.searchQuery.becomeFirstResponder
         else
             ackWindowController = AckWindowController.alloc.initWithWindowNibName "AckWindow"
             ackWindowController.projectRoot = path
             ackWindowController.window.setTitle "Searching in #{path}"
             ackWindowController.showWindow nil
-            ackWindowController.window.defaultButtonCell = ackWindowController.searchButton
+            ackWindowController.window.defaultButtonCell = ackWindowController.searchButton    
+            
+            NSApplication.sharedApplication.arrangeInFront self
+
             @windowController = ackWindowController
         end
     end
