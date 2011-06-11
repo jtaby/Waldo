@@ -88,31 +88,18 @@ class AckWindowController < NSWindowController
         
         tokenizer = Regexp.new(/(.*):(\d+):(.*)/)
         
-        files = {}
+        files = Hash.new {|h,k| h[k] = MatchedFile.new(k, []) }
         
         lines.each do |line|
             if line.match tokenizer
                 
                 filename = $1
+                line_number = $2
+                matched_line = $3
+                ranges = find_matches(line_record.matched_line, line_record.query)
+                query = self.searchQuery.stringValue
                 
-                if not files[filename]
-                    file_record = MatchedFile.new
-                    file_record.filename = filename
-                    file_record.records = []
-                    
-                    files[filename] = file_record
-                else
-                    file_record = files[filename]
-                end
-                
-                line_record = MatchedLine.new
-                line_record.filename = filename
-                line_record.line_number = $2
-                line_record.matched_line = $3
-                line_record.query = self.searchQuery.stringValue
-                line_record.matched_ranges = find_matches(line_record.matched_line, line_record.query)
-                
-                file_record.records << line_record
+                files[filename].records << MatchedLine.new(filename, line_number, matched_line, ranges, query)
             else
                 throw "Could not parse output from ack: #{line}"
             end
