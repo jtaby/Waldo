@@ -35,10 +35,13 @@ class AckWindowController < NSWindowController
             arguments << self.searchQuery.stringValue
             
             bundle_path = NSBundle.mainBundle.resourcePath
+            launch_path = "#{bundle_path}/ack"
             
             ackTask = NSTask.alloc.init
-            ackTask.setLaunchPath "#{bundle_path}/ack"
+            ackTask.setLaunchPath launch_path
             ackTask.setCurrentDirectoryPath @projectRoot
+            
+            puts "Running: #{launch_path} #{arguments.join " "}"
             
             ackTask.setArguments arguments
             
@@ -96,8 +99,8 @@ class AckWindowController < NSWindowController
                 filename = $1
                 line_number = $2
                 matched_line = $3
-                ranges = find_matches(line_record.matched_line, line_record.query)
                 query = self.searchQuery.stringValue
+                ranges = find_matches(matched_line, query)
                 
                 files[filename].records << MatchedLine.new(filename, line_number, matched_line, ranges, query)
             else
