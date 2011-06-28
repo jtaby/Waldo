@@ -22,7 +22,7 @@ set cpo&vim
 
 function s:LaunchWaldoViaVim()
   let cwd = getcwd()
-  silent exe  "!open " . shellescape("waldo://" . cwd)
+  silent exe  "!open -a Waldo " . shellescape(cwd)
 endfunction
 
 command! Waldo :call <SID>LaunchWaldoViaVim()

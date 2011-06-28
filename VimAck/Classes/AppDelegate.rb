@@ -130,6 +130,8 @@ private
             ackWindowController.window.setTitle "Searching in #{path}"
             ackWindowController.showWindow nil
             ackWindowController.window.defaultButtonCell = ackWindowController.searchButton    
+
+            ackWindowController.window.makeKeyAndOrderFront(self)
             
             NSApplication.sharedApplication.arrangeInFront self
 
