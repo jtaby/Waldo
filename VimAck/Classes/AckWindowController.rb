@@ -13,7 +13,7 @@ class AckWindowController < NSWindowController
     
     attr_writer :projectRoot
     attr_accessor :searchQuery, :tableView, :searchButton, :tableViewController, :statsLabel
-    attr_accessor :literalMatch, :caseSensitive, :queue
+    attr_accessor :regexSearch, :ignoreCase, :queue
     
     def runQuery(sender)
         
@@ -30,8 +30,8 @@ class AckWindowController < NSWindowController
 #        @queue.sync do
             
             arguments = []
-            arguments << "--ignore-case" if @caseSensitive.state == 0
-            arguments << "-Q" if @literalMatch.state == 1
+            arguments << "--ignore-case" if @ignoreCase.state == 1
+            arguments << "-Q" if @regexSearch.state == 0
             arguments << self.searchQuery.stringValue
             
             bundle_path = NSBundle.mainBundle.resourcePath
