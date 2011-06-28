@@ -131,8 +131,8 @@ private
             ackWindowController.showWindow nil
             ackWindowController.window.defaultButtonCell = ackWindowController.searchButton
 
+            NSApplication.sharedApplication.activateIgnoringOtherApps(true)
             ackWindowController.window.makeKeyAndOrderFront(self)
-            NSApplication.sharedApplication.arrangeInFront self
             
             ackWindowController.searchQuery.becomeFirstResponder
 
