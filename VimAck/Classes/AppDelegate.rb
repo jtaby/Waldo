@@ -132,6 +132,8 @@ private
 
             ackWindowController.window.makeKeyAndOrderFront(self)
             NSApplication.sharedApplication.arrangeInFront self
+            
+            ackWindowController.searchQuery.becomeFirstResponder
 
             @windowController = ackWindowController
         end
