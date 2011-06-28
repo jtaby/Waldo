@@ -90,7 +90,7 @@ private
     def showStatusBarMenu
         statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
         statusItem.menu = statusMenu
-        statusItem.title = "Waldo"
+        statusItem.title = "W"
         statusItem.highlightMode = true
     end
     
@@ -129,6 +129,7 @@ private
             ackWindowController.projectRoot = path
             ackWindowController.window.setTitle "Searching in #{path}"
             ackWindowController.showWindow nil
+            ackWindowController.window.defaultButtonCell = ackWindowController.searchButton
 
             ackWindowController.window.makeKeyAndOrderFront(self)
             NSApplication.sharedApplication.arrangeInFront self
