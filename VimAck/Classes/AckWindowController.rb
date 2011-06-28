@@ -18,7 +18,7 @@ class AckWindowController < NSWindowController
     def runQuery(sender)
         
         searchButton.setTitle "Searching..."
-        @queue = Dispatch::Queue.new('org.macruby.synchronizer')
+        #@queue = Dispatch::Queue.new('org.macruby.synchronizer')
         performSelector :perform_search, withObject:nil, afterDelay:0
         
     end
@@ -27,7 +27,7 @@ class AckWindowController < NSWindowController
         
         outData = nil
 
-        @queue.sync do
+#        @queue.sync do
             
             arguments = []
             arguments << "--ignore-case" if @caseSensitive.state == 0
@@ -67,7 +67,7 @@ class AckWindowController < NSWindowController
             else
                 ack_error
             end
-        end
+      #  end
         
         searchButton.setTitle "Find" 
     end
