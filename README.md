@@ -56,6 +56,7 @@ I highly encourage you to fork my project and implement any of the features in t
 ### Contributors
 - [Zef Houssney](http://madebykiwi.com)
 - [James Chen](http://ashchan.com)
+- [Martin Schürrer](http://github.com/MSch)
 
 ## License
 
