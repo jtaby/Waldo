@@ -90,7 +90,7 @@ private
     def showStatusBarMenu
         statusItem = NSStatusBar.systemStatusBar.statusItemWithLength NSVariableStatusItemLength
         statusItem.menu = statusMenu
-        statusItem.title = "Waldo5"
+        statusItem.title = "Waldo"
         statusItem.highlightMode = true
     end
     
