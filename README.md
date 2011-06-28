@@ -1,5 +1,5 @@
 
-# Waldo (Current Version: 0.3)
+# Waldo (Current Version: 0.4)
 
 Waldo is a port of TextMate's Find-in-Project feature, designed to work with [MacVim.app](https://github.com/b4winckler/macvim)
 
@@ -11,16 +11,24 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 
 - Download Waldo.zip and put the .app in your Applications folder
 - Launch Waldo.app to install the Vim plugin
-- Open MacVim.app and trigger Waldo using the `<leader>f` mapping
+- Open MacVim.app and trigger Waldo using the `<leader>f` mapping.
+  
+  **NOTE**: `<leader>` is a programmable prefix for commands. By default, it's '\' (backslash), though you can change it in your .vimrc file.
 	
 *NOTE:* If you do not have your `.vim/` folder in your home directory, you must manually place Waldo.vim (found inside the .app package) in your `.vim/plugins` directory.
 	
-*NOTE:* Make sure you `cd` into your project folder. If you don't, then the window won't start-up and you won't get any feedback. I am trying to get that fixed for 0.4
-
-## Known Issues
-- Sometimes on first launch, the app crashes. I can't get this to reproduce reliably and am working towards fixing it. A simple restart of Waldo should fix it. Sorry for any inconvenience. 
+*NOTE:* Make sure you `cd` into directory you want to search.
 
 ## Changelog
+
+### Version 0.4
+- Fix crashes introduced in 0.2
+- Rename "literal match" to "regex"
+- Rename "case sensitive" to "ignore case"
+- Code Refactoring
+- Opening Waldo without specifying a project path in the command line will present an "Open" dialog
+- Launch as menu item only
+- Thanks to [alloy](http://twitter.com/alloy) for helping!
 
 ### Version 0.3
 - Rename project to Waldo (previously known as VimAck)
@@ -36,15 +44,10 @@ Waldo is a port of TextMate's Find-in-Project feature, designed to work with [Ma
 
 ## Roadmap
 
-### Version 0.4
-- Ability to specify project root in Waldo.app
-- Add safe-guards against generic project roots (~, /, etc.)
-- Keyboard navigation
-- Launch as menu item (not dock app)
-
 ### Version 0.5
 - Add history to search field
 - Add ignore-directories feature
+- Keyboard navigation
 
 ## Contributing
 
